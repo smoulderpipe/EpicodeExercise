@@ -1,0 +1,202 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(/assets/img/sfondo.png);
+}
+
+header, header p, header a, header ul {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+header {
+    padding: 30px;
+    background: linear-gradient(180deg, rgba(1, 153, 200, 1) 0%, rgba(0, 111, 136, 1) 100%);
+    margin: 20px;
+
+}
+
+nav {
+    text-align: center;
+}
+
+header a:hover {
+    color: red;
+}
+
+header ul {
+    display: inline-block;
+    margin: 0 auto;
+    list-style-position: inside;
+    list-style-type: none;
+    padding: 0;
+}
+
+header li:before {
+    content: "*";
+
+    position: relative;
+    top: 0px;
+    font-size: 10px;
+    padding: 10px 5px;
+}
+
+main {
+    margin: 20px;
+}
+
+section {
+    padding: 20px;
+    background: white;
+}
+
+.author {
+    color: #a3a3a3;
+}
+
+/* main {
+    box-shadow: 0px 0px 5px #a3a3a3, 0px 0px 0px #a3a3a3;
+} */
+main, header {
+    -moz-box-shadow: 2px 3px 3px #888, -2px 3px 3px #5e5e5e;
+    -webkit-box-shadow: 2px 3px 3px #888, -2px 3px 3px #5e5e5e;
+    box-shadow: 2px 3px 3px #888, -2px 3px 3px #5e5e5e;
+}
+
+section h2 {
+    font-weight: 500;
+}
+
+article h2 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0px;
+}
+
+article p:nth-child(2) {
+    margin: 0px;
+}
+
+hr {
+    display: none;
+}
+
+.material-symbols-outlined {
+    position: relative;
+    top: 6px;
+    margin-right: 2px;
+}
+
+.material-symbols-outlined:first-child {
+    position: relative;
+    top: 6px;
+    margin-right: 5px;
+}
+
+section b, section strong {
+    color: #aa2072;
+}
+
+code {
+    background: #dbdbdb;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 2px;
+}
+
+caption {
+    font-style: italic;
+    font-weight: 600;
+}
+
+thead {
+    background: #3366d8;
+    color: white;
+}
+
+thead th {
+    background: #3366d8;
+    font-weight: 300;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead th, td {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #e8e8e8;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+main a {
+    color: #01a2cb;
+    font-weight: 500;
+}
+
+iframe {
+    border-radius: 25px;
+}
+
+aside div {
+    background: #e2e0e1;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+aside p:nth-child(3) {
+    text-align: right;
+}
+
+aside p {
+    margin: 0px;
+}
+
+.novita {
+    background: #e2e0e1;
+    padding: 15px;
+}
+
+.novita h2, aside h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.novita h2 {
+    margin-top: 0px;
+}
+
+.novita button {
+    border-radius: 0px;
+    background: #1877F2;
+    border: 0px;
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+
+}
+
+input {
+    border: 0;
+    border-bottom: 1px dashed grey;
+
+}
