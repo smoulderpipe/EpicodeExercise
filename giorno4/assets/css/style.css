@@ -32,6 +32,8 @@ header a:hover {
     color: red;
 }
 
+
+
 header ul {
     display: inline-block;
     margin: 0 auto;
@@ -41,10 +43,10 @@ header ul {
 }
 
 header li:before {
-    content: "*";
+    content: "\22c6\0020";
 
     position: relative;
-    top: 0px;
+    top: -3px;
     font-size: 10px;
     padding: 10px 5px;
 }
@@ -149,6 +151,7 @@ main a {
 
 iframe {
     border-radius: 25px;
+    width: 100%;
 }
 
 aside div {
