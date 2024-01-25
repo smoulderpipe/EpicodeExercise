@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-    background-image: url(/assets/img/sfondo.png);
+    background-image: url(../img/sfondo.png);
 }
 
 header, header p, header a, header ul {
