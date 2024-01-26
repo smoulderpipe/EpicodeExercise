@@ -49,10 +49,11 @@ body {
     transition: 0.3s;
     border: 1px solid transparent;
 }
+
 #corsoWeb a:hover {
-   background: #c93116;
-   transition: 0.3s;
-   border: 1px solid white;
+    background: #c93116;
+    transition: 0.3s;
+    border: 1px solid white;
 }
 
 
@@ -74,29 +75,30 @@ section p {
 
 .desktop {
     max-width: 600px;
-    margin: auto; 
-} 
+    margin: auto;
+}
 
-  .specialFlex {
+.specialFlex {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
     padding-top: 30px;
-  }
+}
 
-  .specialFlex p {
+.specialFlex p {
     margin-top: 0px;
     max-width: 300px;
-  }
+}
 
-  .alignLeft {
+.alignLeft {
     text-align: left;
-  }
+}
 
-  .alignRight {
+.alignRight {
     text-align: right;
-  }
+}
+
 #corsoWeb p {
     margin: 20px 0px 40px 0px;
 }
@@ -156,20 +158,16 @@ blockquote p:last-child {
 .altFig {
     border: 1px solid #dee1e3;
     max-width: 30%;
-  margin: auto;
-margin-bottom: 30px;
+    margin: auto;
+    margin-bottom: 30px;
+    transition: 0.3s;
 }
-
-/* figcaption {
-    padding: 10px 20px 20px 20px;
-} */
 
 .altFigChild {
     padding: 20px 20px 10px 20px;
 }
 
 .altFig p {
-    /*font-size: 0.8em;*/
     margin-bottom: 15px;
 }
 
@@ -193,6 +191,7 @@ margin-bottom: 30px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .altFigBack {
     width: 100%;
     height: 230px;
@@ -202,6 +201,13 @@ margin-bottom: 30px;
 .altFig h2 {
     font-size: 1.1em;
 }
+
+.altFig:hover {
+    background: #ededed;
+    border: 1px solid #878787;
+    transition: 0.3s;
+}
+
 
 footer {
     background: #25a2c3;
@@ -234,11 +240,14 @@ footer h2 {
 footer li {
     list-style-type: none;
 }
+
 footer ul {
     padding: 0px;
 }
+
 footer a {
     color: #c8e7f0;
+    transition: 0.3s;
 }
 
 hr {
@@ -254,4 +263,9 @@ main {
 #schede {
     display: flex;
     padding: 90px 25px 0px 25px;
+}
+
+footer a:hover {
+    color: white;
+    transition: 0.3s;
 }
