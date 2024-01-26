@@ -10,22 +10,18 @@ header {
 }
 
 h1 {
-    /* line-height: 1.5em; in teoria questa è quella chiesta dall'esercizio*/
-    line-height: 1;
-    /*questa però è più simile allo screenshot fornito*/
     font-size: 2em;
-    font-weight: 600;
 }
 
 h1, h2 {
     color: #25a2c3;
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
 }
 
-h2 {
+h2, blockquote p {
     font-size: 1em;
 }
+
 
 body {
     color: #393d41;
@@ -36,17 +32,18 @@ body {
     font-weight: 300;
 }
 
+#corsoWeb a, h1 {
+    font-weight: 600;
+}
+
 #corsoWeb a {
     background: #f04c2f;
     font-family: 'Montserrat', sans-serif;
-    color: white;
     text-decoration: none;
     text-transform: uppercase;
     padding: 13px 30px;
     border-radius: 5px;
-    font-weight: 600;
     font-size: 14px;
-    transition: 0.3s;
     border: 1px solid transparent;
 }
 
@@ -75,11 +72,13 @@ section p {
 
 .desktop {
     max-width: 600px;
+}
+
+.desktop, .altFig {
     margin: auto;
 }
 
 .specialFlex {
-    display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -115,20 +114,12 @@ section p {
 
 #testimonianze {
     background: #e22d0e;
-    color: white;
     padding: 100px 25px 50px 35px;
 }
 
 #testimonianze h2 {
-    color: white;
     font-size: 1.5em;
-    line-height: 1;
     margin-bottom: 30px;
-}
-
-blockquote p {
-    font-size: 1em;
-
 }
 
 #notebook {
@@ -136,31 +127,29 @@ blockquote p {
 }
 
 blockquote {
-    margin: 0;
     padding-bottom: 35px;
 }
 
+blockquote, blockquote p:last-child, h1, h2 {
+    margin: 0;
+}
 
 blockquote cite {
     font-style: normal;
-    font-weight: 400;
 }
 
 blockquote p:last-child {
-    margin: 0;
     font-size: 0.7em;
 }
 
-.altFig img {
+.altFig img, .altFigBack {
     width: 100%;
 }
 
 .altFig {
     border: 1px solid #dee1e3;
     max-width: 30%;
-    margin: auto;
     margin-bottom: 30px;
-    transition: 0.3s;
 }
 
 .altFigChild {
@@ -193,7 +182,6 @@ blockquote p:last-child {
 }
 
 .altFigBack {
-    width: 100%;
     height: 230px;
 }
 
@@ -208,32 +196,38 @@ blockquote p:last-child {
     transition: 0.3s;
 }
 
+blockquote cite, footer {
+    font-weight: 400;
+}
 
 footer {
     background: #25a2c3;
     color: #c8e7f0;
     padding: 45px 0px 45px 0px;
-    font-size: 0.9em;
-    font-weight: 400;
 }
 
 footer p {
     font-size: 0.8em;
 }
 
-footer ul {
+footer, footer ul {
     font-size: 0.9em;
 }
 
 footer i {
-    color: white;
     margin-right: 5px;
 }
 
-footer h2 {
+footer i, footer h2, #corsoWeb a, #testimonianze, #testimonianze h2 {
     color: white;
-    font-size: 1.7em;
+}
+
+footer h2, h1, #testimonianze h2 {
     line-height: 1;
+}
+
+footer h2 {
+    font-size: 1.7em;
     margin-bottom: 20px;
 }
 
@@ -247,6 +241,9 @@ footer ul {
 
 footer a {
     color: #c8e7f0;
+}
+
+footer a, #corsoWeb a, .altFig {
     transition: 0.3s;
 }
 
@@ -260,8 +257,11 @@ main {
     margin-bottom: 70px;
 }
 
-#schede {
+#schede, .specialFlex {
     display: flex;
+}
+
+#schede {
     padding: 90px 25px 0px 25px;
 }
 
