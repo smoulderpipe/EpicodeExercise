@@ -145,10 +145,9 @@ footer {
     background: #25a2c3;
     color: #c8e7f0;
     padding: 45px 0px 45px 0px;
-    font-size: 0.9em;
 }
 
-footer ul {
+footer, footer ul {
     font-size: 0.9em;
 }
 
