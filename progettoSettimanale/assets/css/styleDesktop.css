@@ -88,16 +88,16 @@ section p {
 
 .specialFlex p {
     margin-top: 0px;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .alignLeft {
     text-align: left;
 }
-
+/* 
 .alignRight {
     text-align: right;
-}
+} */
 
 #corsoWeb p {
     margin: 20px 0px 40px 0px;
@@ -111,6 +111,10 @@ section p {
 
 .specialColumn {
     max-width: 33%;
+}
+
+.specialColumn2 {
+    max-width: 50%;
 }
 
 #testimonianze {
@@ -228,7 +232,11 @@ footer li {
 }
 
 footer ul {
-    padding: 0px;
+    /*padding: 0px;*/
+    text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 253px;
 }
 
 footer a {
