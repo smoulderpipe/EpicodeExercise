@@ -78,6 +78,10 @@ section p {
     margin: 20px 0px 40px 0px;
 }
 
+address {
+    font-style: normal;
+}
+
 #notebook img {
     max-width: 75%;
     border-radius: 50%;

@@ -22,6 +22,10 @@ h2, blockquote p {
     font-size: 1em;
 }
 
+address {
+    font-style: normal;
+}
+
 
 body {
     color: #393d41;
