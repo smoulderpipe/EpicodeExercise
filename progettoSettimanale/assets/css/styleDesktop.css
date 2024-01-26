@@ -182,11 +182,11 @@ blockquote p:last-child {
     font-size: 1.1em;
 }
 
-.altFig:hover {
+/*.altFig:hover {
     background: #ededed;
     border: 1px solid #878787;
     transition: 0.3s;
-}
+}*/
 
 blockquote cite, footer {
     font-weight: 400;
@@ -235,7 +235,7 @@ footer a {
     color: #c8e7f0;
 }
 
-footer a, #corsoWeb a, .altFig {
+footer a, #corsoWeb a {
     transition: 0.3s;
 }
 
