@@ -1,0 +1,189 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: black;
+    padding: 30px;
+}
+
+h1 {
+    /* line-height: 1.5em; in teoria questa è quella chiesta dall'esercizio*/
+    line-height: 1;
+    /*questa però è più simile allo screenshot fornito*/
+    font-size: 2em;
+    font-weight: 600;
+}
+
+h1, h2 {
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+body {
+    color: #393d41;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#corsoWeb a {
+    background: #f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+section {
+    padding: 50px 25px 0px 25px;
+}
+
+section p {
+    margin: 10px 0px 25px 0px;
+}
+
+#corsoWeb {
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 20px 80px 20px;
+    background-position: center;
+}
+
+.desktop {
+    max-width: 600px;
+    margin: auto;
+}
+
+#corsoWeb p {
+    margin: 20px 0px 40px 0px;
+}
+
+#notebook img {
+    max-width: 58%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+#testimonianze {
+    background: #e22d0e;
+    color: white;
+    padding: 60px 25px 0px 35px;
+}
+
+#testimonianze h2 {
+    color: white;
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+blockquote p {
+    font-size: 0.8em;
+
+}
+
+#notebook {
+    margin-bottom: 60px;
+}
+
+blockquote {
+    margin: 0;
+    padding-bottom: 35px;
+}
+
+blockquote cite {
+    font-style: normal;
+    font-weight: 400;
+}
+
+blockquote p:last-child {
+    margin: 0;
+    font-size: 0.7em;
+}
+
+figure img {
+    max-width: 100%;
+}
+
+figure {
+    border: 1px solid #dee1e3;
+    max-width: 50%;
+  margin: auto;
+margin-bottom: 30px;
+}
+
+figcaption {
+    padding: 10px 20px 20px 20px;
+}
+
+figcaption p {
+    /*font-size: 0.8em;*/
+    margin-bottom: 15px;
+}
+
+figcaption h2 {
+    font-size: 1.1em;
+}
+
+footer {
+    background: #25a2c3;
+    color: #c8e7f0;
+    padding: 45px 0px 45px 0px;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+footer p {
+    font-size: 0.8em;
+}
+
+footer ul {
+    font-size: 0.9em;
+}
+
+footer i {
+    color: white;
+    margin-right: 5px;
+}
+
+footer h2 {
+    color: white;
+    font-size: 1.7em;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+footer li {
+    list-style-type: none;
+}
+footer ul {
+    padding: 0px;
+}
+footer a {
+    color: #c8e7f0;
+}
+
+hr {
+    width: 25%;
+    border: 0.3px solid white;
+    margin: 30px auto;
+}
+
+main {
+    margin-bottom: 70px;
+}
