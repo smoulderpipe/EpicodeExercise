@@ -30,7 +30,7 @@ blockquote, blockquote p:last-child, h1, h2 {
     margin: 0;
 }
 
-/*Per evitare "da capo" brutti nella versione mobile*/
+/*Per evitare paragrafi brutti nella versione mobile tra 375px e 500px*/
 .content {
     max-width: 380px;
     margin-left: auto;
