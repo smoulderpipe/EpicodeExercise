@@ -63,11 +63,8 @@ section p {
 }
 
 #corsoWeb {
-    background-image: url(../img/banner.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 80px 20px 80px 20px;
-    background-position: center;
+    background: url(../img/banner.jpg) no-repeat center center / cover;
+    padding: 80px 20px;
 }
 
 .desktop {
@@ -161,24 +158,15 @@ blockquote p:last-child {
 }
 
 #altFigBack1 {
-    background: url(../img/foto1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../img/foto1.jpg) no-repeat center center / cover;
 }
 
 #altFigBack2 {
-    background: url(../img/foto2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../img/foto2.jpg) no-repeat center center / cover;
 }
 
 #altFigBack3 {
-    background: url(../img/foto3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../img/foto3.jpg) no-repeat center center / cover;
 }
 
 .altFigBack {
@@ -203,7 +191,7 @@ blockquote cite, footer {
 footer {
     background: #25a2c3;
     color: #c8e7f0;
-    padding: 45px 0px 45px 0px;
+    padding: 45px 0px;
 }
 
 footer p {

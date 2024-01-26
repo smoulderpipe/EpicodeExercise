@@ -70,11 +70,8 @@ section p {
 }
 
 #corsoWeb {
-    background-image: url(../img/banner.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 50px 20px 45px 20px;
-    background-position: center;
+    background: url(../img/banner.jpg) no-repeat center center / cover;
 }
 
 #corsoWeb p {
