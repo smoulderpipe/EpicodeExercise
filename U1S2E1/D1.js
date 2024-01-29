@@ -106,5 +106,16 @@ console.log(name1===name2Lowercase);
 
 */
 
+document.getElementById("risposta1").innerHTML = " CIAO MONDO!";
+document.getElementById("risposta2").innerHTML = 35718417.351515;
+document.getElementById("risposta3").innerHTML = " let myName = 'Paola' "
+document.getElementById("risposta4").innerHTML = " console.log(12 + 20); "
+document.getElementById("risposta5").innerHTML = " let x = 12 <br> console.log(x); "
+document.getElementById("risposta6").innerHTML = " let myName = 'Paola' <br> myName = 'Del Vecchio' <br> console.log(myName); "
+document.getElementById("risposta7").innerHTML = " const myName = 'Paola' <br> myName = 'Del Vecchio' <br> console.log(myName); "
+document.getElementById("risposta8").innerHTML = " let x = 12 <br> console.log(4-x); "
+document.getElementById("risposta9").innerHTML = " let name1 = 'john' <br> let name2 = 'John' <br> console.log(name1===name2); "
+document.getElementById("risposta10").innerHTML = " let name1 = 'john' <br> let name2 = 'John' <br> name2Lowercase = name2.toLowerCase(); <br> console.log(name1===name2Lowercase); "
+
 
 
