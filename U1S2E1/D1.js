@@ -14,10 +14,12 @@ REGOLE
 /*
 SCRIVI QUI LA TUA RISPOSTA
 
-I principali datatype in Javascript sono 3: stringhe, valori numerici e valori booleani.
+I principali datatype in Javascript sono 3 (+2): stringhe, valori numerici e valori booleani (+ ci sono anche le keywords "null" e "undefined", se vogliamo considerarle parte di questo insieme).
  - Le stringhe sono sequenze finite di caratteri (ma possono essere composte anche solo da 1 carattere) racchiuse tra due apici doppi o singoli (meglio usare i doppi). Per esempio: "CIAO MONDO!" è una stringa.
  - I valori numerici sono numeri interi oppure numeri decimali (Javascript non ha bisogno che gli venga detto se il numero è intero o decimale, lo capisce da solo leggendolo). Si scrivono senza apici, altrimenti diventano stringhe. Il decimale si scrive con il punto. Per esempio: 35718417.351515 è un valore numerico.
- - I valori booleani possono essere solo di due tipi: true oppure false. Si usano nei controlli condizionali, dove il nostro codice può eseguire una determinata operazione se un valore booleano è true, oppure ne esegue un'altra se quel valore è false (e viceversa, questo è solo un esempio, dipende dal caso quello che vogliamo fargli fare). Per esempio: 3 > 9 è un valore booleano di tipo false, perché 3 non è minore di 9. */
+ - I valori booleani possono essere solo di due tipi: true oppure false. Si usano nei controlli condizionali, dove il nostro codice può eseguire una determinata operazione se un valore booleano è true, oppure ne esegue un'altra se quel valore è false (e viceversa, questo è solo un esempio, dipende dal caso quello che vogliamo fargli fare). Per esempio: 3 > 9 è un valore booleano di tipo false, perché 3 non è minore di 9.
+ - Il valore "null" segnala l'assenza intenzionale di un oggetto ed è diverso dal valore 0. Es. se un utente dimentica di riempire alcuni campi del form, il valore inviato a Javascript per quei campi è "null".
+ - Il valore "undefined" segnala che una proprietà non ha valore, perché non è stata definita. Es. se dico let myName sto dichiarando la variabile senza definirla, e se faccio un console log di console.log(myName) avrò come risultato "undefined" perché non ho assegnato alcun valore a quella variabile, quindi sarà indefinita. */
 
 /* ESERCIZIO 2
  Crea una variable chiamata "myName" e assegna ad essa il tuo nome, sotto forma di stringa.
