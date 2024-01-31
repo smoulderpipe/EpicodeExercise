@@ -132,12 +132,10 @@ come faccio a farlo?
 6) profit
 */
 
-/*SOLUZIONE PAOLA*/
-
-// for (let i = 0; i < starWarsCharacters.length; i++) {
-// characterNames.push(starWarsCharacters[i].name);
-// console.log('characterNames');
-// }
+for (let i = 0; i < starWarsCharacters.length; i++) {
+characterNames.push(starWarsCharacters[i].name);
+console.log('characterNames');
+}
 
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
@@ -150,8 +148,6 @@ questo non è uguale a quello di prima, perché vuoi pushare dentro l'array degl
   Gli oggetti vanno destrutturati per essere inseriti dentro un array, giusto?
   Inoltre devo usare un filtro sulla proprietà "gender" perché voglio stampare solo le femmine.
 */
-
-/*SOLUZIONE PAOLA*/
 
 const femaleCharacters = []; //l'array femaleCharacters è vuoto.
 for (let i = 0; i < starWarsCharacters.length; i++) { //al verificarsi di questa condizione
@@ -177,6 +173,16 @@ console.log(femaleCharacters);
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
+
+const eyeColor = {
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  blueGray: [],
+};
+
+console.log(eyeColor);
 
 /* ESERCIZIO 5
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
