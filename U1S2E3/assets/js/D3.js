@@ -151,19 +151,8 @@ questo non è uguale a quello di prima, perché vuoi pushare dentro l'array degl
   Inoltre devo usare un filtro sulla proprietà "gender" perché voglio stampare solo le femmine.
 */
 
-// const femaleCharacters = [...starWarsCharacters]; //per popolare il nuovo array con il contenuto del vecchio array uso lo spread operator
+/*SOLUZIONE PAOLA*/
 
-// let i = femaleCharacters.gender;
-// for (let i = 0; i < femaleCharacters.length; i++) {
-// console.log(femaleCharacters);
-// }
-
-
-// for (const character of starWarsCharacters) {
-//   if (character.gender === "female") {
-//     femaleCharacters.push(character);
-//   }
-// }
 const femaleCharacters = []; //l'array femaleCharacters è vuoto.
 for (let i = 0; i < starWarsCharacters.length; i++) { //al verificarsi di questa condizione
   if (starWarsCharacters[i].gender === "female") { //se il genere è femminile, pusha dentro l'array gli oggetti uno alla volta
@@ -182,16 +171,6 @@ for (let i = 0; i < starWarsCharacters.length; i++) { //al verificarsi di questa
 
 console.log(femaleCharacters);
 
-
-/*SOLUZIONE PAOLA (non riesce, manda in blocco il browser)*/
-/*
-// const femaleCharacters = [...starWarsCharacters]; //per popolare il nuovo array con il contenuto del vecchio array uso lo spread operator
-
-// let i = femaleCharacters.gender;
-// for (i = 0; i !== "male"; i++) {
-//   console.log(femaleCharacters);
-// }
-*/
 
 
 /* ESERCIZIO 4
