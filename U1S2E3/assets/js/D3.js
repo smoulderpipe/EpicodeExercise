@@ -107,7 +107,7 @@ const starWarsCharacters = [
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
 
-let characterNames = [];
+const characterNames = [];
 console.log(characterNames);
 
 /* ESERCIZIO 2
@@ -116,7 +116,8 @@ console.log(characterNames);
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
-/* hai 2 array:
+/* RAGIONAMENTO PAOLA
+hai 2 array:
 il 1° array si chiama starWarsCharacters ed è popolato da oggetti 
 il 2° array si chiama characterNames ed è vuoto
 devo inserire nel 2° array l'elenco di valori assunti dalla proprietà "name", che si trova in ogni oggetto contenuto dentro il 1° array
@@ -129,17 +130,69 @@ come faccio a farlo?
 4) per popolare il secondo array con i valori della proprietà "nome" (come richiesto dall'esercizio), devo fare un push su characterNames con i dati relativi alla proprietà "name" del primo array.
 5) alla fine stampo a video il secondo array per vedere se è venuto fuori corretto
 6) profit
-
 */
 
-for (i = 0; i < starWarsCharacters.length; i++) {
-  characterNames.push(starWarsCharacters[i].name);
-  console.log('characterNames');
-}
+/*SOLUZIONE PAOLA*/
+
+// for (let i = 0; i < starWarsCharacters.length; i++) {
+// characterNames.push(starWarsCharacters[i].name);
+// console.log('characterNames');
+// }
 
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
+
+
+/* 
+RAGIONAMENTO PAOLA
+questo non è uguale a quello di prima, perché vuoi pushare dentro l'array degli oggetti, non dei valori, quindi attenzione.
+  Gli oggetti vanno destrutturati per essere inseriti dentro un array, giusto?
+  Inoltre devo usare un filtro sulla proprietà "gender" perché voglio stampare solo le femmine.
+*/
+
+// const femaleCharacters = [...starWarsCharacters]; //per popolare il nuovo array con il contenuto del vecchio array uso lo spread operator
+
+// let i = femaleCharacters.gender;
+// for (let i = 0; i < femaleCharacters.length; i++) {
+// console.log(femaleCharacters);
+// }
+
+
+// for (const character of starWarsCharacters) {
+//   if (character.gender === "female") {
+//     femaleCharacters.push(character);
+//   }
+// }
+const femaleCharacters = []; //l'array femaleCharacters è vuoto.
+for (let i = 0; i < starWarsCharacters.length; i++) { //al verificarsi di questa condizione
+  if (starWarsCharacters[i].gender === "female") { //se il genere è femminile, pusha dentro l'array gli oggetti uno alla volta
+    let oggettoFemminile = {
+      name: starWarsCharacters[i].name,
+      mass: starWarsCharacters[i].mass,
+      hair_color: starWarsCharacters[i].hair_color,
+      skin_color: starWarsCharacters[i].skin_color,
+      eye_color: starWarsCharacters[i].eye_color,
+      birth_year: starWarsCharacters[i].birth_year,
+      gender: starWarsCharacters[i].gender,
+    };
+    femaleCharacters.push(oggettoFemminile);
+  }
+}
+
+console.log(femaleCharacters);
+
+
+/*SOLUZIONE PAOLA (non riesce, manda in blocco il browser)*/
+/*
+// const femaleCharacters = [...starWarsCharacters]; //per popolare il nuovo array con il contenuto del vecchio array uso lo spread operator
+
+// let i = femaleCharacters.gender;
+// for (i = 0; i !== "male"; i++) {
+//   console.log(femaleCharacters);
+// }
+*/
+
 
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
