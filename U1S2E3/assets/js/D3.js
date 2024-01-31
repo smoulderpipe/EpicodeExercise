@@ -218,7 +218,7 @@ console.log(eyeColor);
 let crewMass = 0; //partendo dal peso totale 0 (deve avere un punto di partenza)
 let i = 0; //si crea un incremento che parte da 0
 while(i < starWarsCharacters.length) { //per tutti gli incrementi da 0 alla fine dell'array di personaggi
-  crewMass += starWarsCharacters[i].mass; //il peso totale è uguale alla somma tra se stesso e il peso di tutti i personaggi
+  crewMass += starWarsCharacters[i].mass; //il peso totale è uguale alla somma tra 0 il peso di tutti i personaggi
   i++;
 }
 
