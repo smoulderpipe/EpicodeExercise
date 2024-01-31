@@ -101,15 +101,41 @@ const starWarsCharacters = [
   },
 ]
 
+
+
 /* ESERCIZIO 1
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
+
+let characterNames = [];
+console.log(characterNames);
 
 /* ESERCIZIO 2
   Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
   Dovrai accedere alla proprietà "name" di ogni oggetto in esso contenuto, e inserirla nell'array "charactersNames" creato precedentemente.
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
+
+/* hai 2 array:
+il 1° array si chiama starWarsCharacters ed è popolato da oggetti 
+il 2° array si chiama characterNames ed è vuoto
+devo inserire nel 2° array l'elenco di valori assunti dalla proprietà "name", che si trova in ogni oggetto contenuto dentro il 1° array
+
+come faccio a farlo?
+
+1) per prima cosa devo accedere alla lunghezza del primo array per usarla come condizione di interruzione del for, in maniera che l'array che devo popolare venga popolato con un numero finito di dati.
+2) poi devo accedere alla proprietà name di starWarsCharacters, quindi immagino che ci sarà un starWarsCharacters.name da qualche parte
+3) questo starWarsCharacters.name, che mi serve per popolare il secondo array, dovrà essere usato in combinazione con [i], perché c'è il for che ci fa andare da 0 all'ultimo elemento del primo array.
+4) per popolare il secondo array con i valori della proprietà "nome" (come richiesto dall'esercizio), devo fare un push su characterNames con i dati relativi alla proprietà "name" del primo array.
+5) alla fine stampo a video il secondo array per vedere se è venuto fuori corretto
+6) profit
+
+*/
+
+for (i = 0; i < starWarsCharacters.length; i++) {
+  characterNames.push(starWarsCharacters[i].name);
+  console.log('characterNames');
+}
 
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
