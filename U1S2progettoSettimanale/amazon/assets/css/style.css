@@ -138,7 +138,9 @@ footer a {
 #bottom:hover {
     background: #293745
 }
-
+.giftGranparent {
+    text-align: center;
+}
 .giftParent img {
     border-radius: 25px;
     height: 330px;
