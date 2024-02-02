@@ -10,6 +10,10 @@ body {
     font-size: 1em;
 }
 
+header ul, .findGift {
+    margin: 0;
+}
+
 header {
     background-color: #222f3f;
     font-size: 0.8em;
@@ -27,15 +31,19 @@ header nav {
     background: #364759;
 }
 
+header ul, header li, h2 {
+    display: inline;
+}
+
 header ul {
     list-style-type: none;
-    display: inline;
+}
+
+header ul, .holidaySection, #bottom {
     padding: 0;
-    margin: 0;
 }
 
 header li {
-    display: inline;
     margin: 5px;
 }
 
@@ -43,12 +51,15 @@ a {
     text-decoration: none;
 }
 
-header a, button, #holidayGiftGuides {
+header a, button, #holidayGiftGuides, footer a {
     color: white;
 }
 
-button {
+button, .giftParent img, .largeSections img {
     width: 100%;
+}
+
+button {
     background: #f56600;
     border: 0;
     padding: 10px;
@@ -70,7 +81,6 @@ main {
 
 section {
     margin: 20px 0;
-    /* padding: 20px; */
 }
 
 .giftParent:nth-child(1) {
@@ -85,10 +95,6 @@ h1 {
     text-transform: capitalize;
 }
 
-.centered {
-    text-align: center;
-}
-
 #holidayGiftGuides {
     background-image: url(../img/bg-image.png);
     background-size: contain;
@@ -97,54 +103,65 @@ h1 {
 
 h2 {
     font-size: 1em;
-    display: inline;
     font-weight: 300;
 }
 
 .didascalia a {
     margin-left: 20px;
-    color: #225d66;
+    color: #247380;
     font-weight: 600;
     font-size: 0.8em;
 }
 
-.giftGrandparent {
+.giftGrandparent, footer, .didascalia.bis, .centered {
     text-align: center;
+}
+
+footer {
+    background: #222f3f;
+}
+
+footer img {
+    width: 150px;
+    padding: 20px 0px 40px 0px;
+}
+
+footer a {
+    display: block;
+    padding: 10px 0;
+}
+
+#bottom {
+    background: #364759;
+}
+
+#bottom:hover {
+    background: #293745;
 }
 
 .giftParent img {
     border-radius: 25px;
-    width: 100%;
     height: 330px;
-    object-fit: cover; /*non sono sicura se lo abbiamo fatto o no*/
+    object-fit: cover;
     box-shadow: 11px 10px 19px -2px rgba(189, 189, 189, 0.75);
     -webkit-box-shadow: 11px 10px 19px -2px rgba(189, 189, 189, 0.75);
     -moz-box-shadow: 11px 10px 19px -2px rgba(189, 189, 189, 0.75);
 }
 
 .giftParent {
-    width: 23.2%;
-    /*risolvi problema allineamento a sinistra del div con le schede*/
+    max-width: 23.2%;
     display: inline-block;
     padding: 10px;
+    margin: 0 auto;
 
 }
 
 .findGift {
     background: white;
-    margin: 0;
     padding: 20px;
 }
 
 .didascalia {
     text-align: left;
     margin-bottom: 8px;
-}
-
-.holidaySection {
-    padding: 0;
-}
-
-.giftingGame img {
-    width: 100%;
 }

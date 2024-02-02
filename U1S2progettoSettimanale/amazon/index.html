@@ -7,17 +7,14 @@
     <meta name="author" content="Paola" />
     <meta name="description" content="U1W2D5 - progetto settimanale" />
     <title>AMAZON - Holiday Gift Guides</title>
-    <!-- qui potrei mettere normalize
-    qui potrei mettere eventuali link a font o librerie esterne -->
+    <!-- Importazione normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <header>
-
-        <!-- logo amazon -->
+    <header id="top">
         <img src="assets/img/logo.png" />
-
         <nav>
             <ul>
                 <li>
@@ -41,10 +38,8 @@
                     <a href="javascript:void(0)">Sell</a>
                 </li>
             </ul>
-
         </nav>
     </header>
-
     <main>
         <section class="holidaySection">
             <button type="button">Shop All Holiday Gift Cards</button>
@@ -52,47 +47,49 @@
                 <h1>Holiday gift guides</h1>
                 <p>Be a go-gifter</p>
             </div>
-
         </section>
         <section class="findGift">
-            <div>
-                <div class="didascalia">
-                    <h2>Find the perfect gift</h2><a href="javascript:void(0)">Shop now</a>
-
-                </div>
+            <div class="didascalia">
+                <h2>Find the perfect gift</h2><a href="javascript:void(0)">Shop now</a>
             </div>
             <div class="giftGranparent">
-                <div class="giftParent">
+                <article class="giftParent">
                     <img src="assets/img/img_1.jpg" />
-                </div>
-                <div class="giftParent">
+                </article>
+                <article class="giftParent">
                     <img src="assets/img/img_2.jpg" />
-                </div>
-                <div class="giftParent">
+                </article>
+                <article class="giftParent">
                     <img src="assets/img/img_3.jpg" />
-                </div>
-                <div class="giftParent">
+                </article>
+                <article class="giftParent">
                     <img src="assets/img/img_4.jpg" />
-                </div>
+                </article>
             </div>
-
         </section>
         <section>
-            <!-- play the gifting game -->
-            <div class="giftingGame">
+            <article class="largeSections">
                 <img src="assets/img/img_9.png" />
+            </article>
+            <div class="didascalia bis">
+                <h2>Play the gifting game</h2><a href="javascript:void(0)">Shop gaming</a>
             </div>
         </section>
         <section>
-            <!-- the sound of cheer -->
+            <article class="largeSections">
+                <img src="assets/img/img_10.png" />
+            </article>
+            <div class="didascalia bis">
+                <h2>The sound of cheer</h2><a href="javascript:void(0)">Shop Audio & Accessories</a>
+            </div>
         </section>
     </main>
-
     <footer>
-        <!-- back to top -->
+        <button id="bottom">
+            <a href="#top">Back to top</a></button>
         <!-- img -->
+        <img src="assets/img/logo.png" />
     </footer>
-
 </body>
 
 </html>
