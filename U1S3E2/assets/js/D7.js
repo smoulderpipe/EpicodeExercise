@@ -82,16 +82,24 @@ function sommaNumeri() {
     somma += element;
   });
   return somma;
+  // console.log(somma); (perché non posso metterlo dentro la funzione?)
 }
 
 const risultato = sommaNumeri();
 console.log(risultato); //6
 
-/*si può fare anche col reduce*/
-
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
+function sommaNumeriReduce() {
+  return arrayBreve.reduce((totale, valoreCorrente) => {
+    return totale + valoreCorrente;
+  }, 0);
+}
+
+const risultato2 = sommaNumeriReduce();
+console.log(risultato2); // 6
 
 /*stessa cosa*/
 
