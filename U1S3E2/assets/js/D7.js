@@ -43,33 +43,83 @@ concaTena('cane', 'gatto'); // Stampa "CATTO"
 /* questo si fa come quello dei colori del giorno precedente*/
 
 
+//crea una funzione
+//definisci un array vuoto
+//per ogni indice dell'array fino al 10 escluso
+//metti nell'array un valore casuale fino a 100
+//console log dell'array aggiornato
+
+function tornaRandom() {
+  const tenElements = [];
+  for(let i = 0; i < 10; i++) {
+    tenElements.push(Math.floor(Math.random() * 101)); 
+  }
+  console.log(tenElements); // Stampa l'array di numeri casuali nella console
+}
+
+tornaRandom();
+
+
+// function generaArrayRandom() {
+//   const array = [];
+//   for (let i = 0; i < 10; i++) {
+//     array.push(Math.floor(Math.random() * 101));
+//   }
+//   return array;
+// }
+
+// Esempio di utilizzo
+// const arrayRandom = generaArrayRandom();
+// console.log(arrayRandom); // Stampa un array di 10 numeri casuali tra 0 e 100
+
+
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
-const arrayNumerico = [5, 8, 3, 9, 2121281, 34834];
+//definisco variabile array
+//creo funzione
+//creo array di destinazione
+//creo un filter dell'array originale
+//che ritorni solo i pari
+//stampo in console log
+//richiamo funzione
 
-function valoriPari() {
-  const arrayPari = [];
-  for (i = 0; i < arrayNumerico.length; i++) {
-    if(arrayNumerico[i] % 2 === 0) {
-      arrayPari.push(arrayNumerico[i]); 
-    }
-  }
-  console.log(arrayPari);
+const arrayNumerico3 = [11, 25, 82, 3, 4];
+
+function ricavaPari() {
+  const nuovoArray = arrayNumerico3.filter(function(element) {
+    return element % 2 === 0;
+  });
+  console.log(nuovoArray);
 }
 
-valoriPari(arrayNumerico);
+ricavaPari();
+
+/*oppure con il ciclo for*/
+// const arrayNumerico = [5, 8, 3, 9, 2121281, 34834];
+
+// function valoriPari() {
+//   const arrayPari = [];
+//   for (i = 0; i < arrayNumerico.length; i++) {
+//     if(arrayNumerico[i] % 2 === 0) {
+//       arrayPari.push(arrayNumerico[i]); 
+//     }
+//   }
+//   console.log(arrayPari);
+// }
+
+// valoriPari(arrayNumerico);
 
 /*oppure, utilizzando il filter()*/
 
 // Dichiara una variabile chiamata `arrayNumerico2` che contiene un array di numeri.
-const arrayNumerico2 = [5, 8, 3, 9, 2121281, 34834];
+// const arrayNumerico2 = [5, 8, 3, 9, 2121281, 34834];
 // Filtra i numeri pari dall'array utilizzando il metodo `filter()`.
-const numeriPari = arrayNumerico2.filter(elemento => elemento % 2 === 0);
+// const numeriPari = arrayNumerico2.filter(elemento => elemento % 2 === 0);
 // Stampa in console il contenuto della variabile `numeriPari`.
-console.log(numeriPari);
+// console.log(numeriPari);
 
 
 /* ESERCIZIO 4 (forEach)
