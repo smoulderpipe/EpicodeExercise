@@ -31,8 +31,8 @@ function addTask(taskText) {
 // Aggiungo la classe "task" al nuovo elemento "li"
 
 const taskElement = document.createElement("li");
-taskElement.textContent = taskText;
-taskElement.classList.add("task");
+taskElement.innerText = taskText;
+taskElement.setAttribute("class", "task");
 
 // Creo un elemento "button" per completare il task
 // Imposto il testo del pulsante: "Completa"
@@ -41,23 +41,23 @@ taskElement.classList.add("task");
 // Quando clicco su "completa", sul <li> creato deve essere applicata la classe "completed"
 
 const completeTaskButton = document.createElement("button");
-  completeTaskButton.textContent = "Completa";
-  completeTaskButton.classList.add("completeTaskButton");
+  completeTaskButton.innerText = "Completa";
+  completeTaskButton.setAttribute("class", "completeTaskButton");
   completeTaskButton.addEventListener("click", () => {
-    taskElement.classList.add("completed");
+    taskElement.setAttribute("class", "completed");
   });
 
 // Creo un elemento "button" per eliminare il task
 // Imposto il testo del pulsante: "Elimina"
 // Aggiungo la classe "deleteTaskButton" al pulsante
 // Aggiungo un evento click al pulsante "Elimina"
-// Quando clicco sul pulsante "Elimina", il <li> creato deve essere eliminato
+// Quando clicco sul pulsante "Elimina", il taskElement creato deve essere eliminato
 
 const deleteTaskButton = document.createElement("button");
-  deleteTaskButton.textContent = "Elimina";
-  deleteTaskButton.classList.add("deleteTaskButton");
+  deleteTaskButton.innerText = "Elimina";
+  deleteTaskButton.setAttribute("class", "deleteTaskButton");
   deleteTaskButton.addEventListener("click", () => {
-    taskElement.parentNode.removeChild(taskElement);
+    taskElement.remove();
   });
 
 // Appendo il pulsante "Completa" al taskElement
