@@ -169,6 +169,7 @@ console.log(risultato2); // 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
+
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
@@ -304,6 +305,8 @@ function piuVecchio() {
   let anno = 2100;
   movies.forEach((element) => {
     //Number trasforma un valore di tipo stringa, booleano o altro in un numero.
+    //se l'anno è inferiore a 2100
+    //anno corrisponde al valore riportato nella proprietà year degli oggetti dell'array
     if (Number(element.Year) < anno) {
       anno = Number(element.Year);
     }
@@ -320,6 +323,15 @@ piuVecchio();
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+
+function titoli() {
+  arrayTitoli = movies.map((element) => {
+    return element.Title;
+    
+  });
+  return arrayTitoli;
+}
+console.log(titoli());
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
