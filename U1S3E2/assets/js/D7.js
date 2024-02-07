@@ -187,6 +187,18 @@ console.log('esercizio 6 ' + Risultato6);
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+// function lunghezzeStringhe() {
+//   const lengthArray = []; // Dichiarazione di `lengthArray` all'inizio della funzione
+
+//   for (let i = 0; i < arrayEpicode.length; i++) {
+//     lengthArray.push(arrayEpicode[i].length); // Aggiunta della lunghezza di ogni stringa all'array `lengthArray`
+//   }
+
+//   return lengthArray;
+// }
+
+// console.log('esercizio 7:', lunghezzeStringhe()); // Stampa il risultato della funzione
+
 
 /*dentro map devo scrivere il metodo che mi ritorna la lunghezza di ogni singola stringa*/
 
