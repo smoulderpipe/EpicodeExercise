@@ -169,6 +169,19 @@ console.log(risultato2); // 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
+const numeri6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const valore = 7;
+
+function secondoArray(array, valore) {
+  const qualcosa = array.map(function(val6) {
+    return val6 * valore
+  });
+  return qualcosa;
+};
+
+const Risultato6 = secondoArray(numeri6, valore);
+console.log('esercizio 6 ' + Risultato6);
+
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
@@ -180,6 +193,21 @@ console.log(risultato2); // 6
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+function dispari() {
+  let arrayTutti = [];
+  for (let i = 1; i < 100; i++) {
+    arrayTutti.push(i);
+  }
+  let arrayDispari = [];
+  arrayTutti.forEach((element) => {
+    if(element % 2 !== 0) {
+      arrayDispari.push(element);
+    }
+  });
+  return arrayDispari;
+}
+console.log('esercizio 8 ' + dispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
