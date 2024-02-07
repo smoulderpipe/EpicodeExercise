@@ -36,6 +36,18 @@ function concaTena() {
 
 concaTena('cane', 'gatto'); // Stampa "CATTO"
 
+/*oppure*/
+
+const stringa1 = 'ciao';
+const stringa2 = 'salve';
+
+function crasi(stringa1, stringa2) {
+  return (stringa1.slice(0,2)).toUpperCase() + stringa2.slice(2, 5).toUpperCase()
+} 
+console.log("esercizio 1");
+console.log(crasi(stringa1, stringa2))
+
+
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
@@ -288,6 +300,19 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
+function piuVecchio() {
+  let anno = 2100;
+  movies.forEach((element) => {
+    //Number trasforma un valore di tipo stringa, booleano o altro in un numero.
+    if (Number(element.Year) < anno) {
+      anno = Number(element.Year);
+    }
+  });
+  console.log(anno);
+}
+
+piuVecchio();
+  
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
