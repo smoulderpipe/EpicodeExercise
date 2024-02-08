@@ -21,5 +21,25 @@ for (let i = 1; i <= 90; i++) {
     tabellone.push(i);
 }
 
-console.log(tabellone);
+const tableElement = document.querySelector('table');
+
+const generaTabellone = () => {
+    //creo le righe da 1 a 9
+    for (let i = 0; i < 9; i++) {
+        const tr = document.createElement('tr');
+    //per ciascuna riga, creo 10 td
+        for (let j = 0; j < 10; j++) {
+            const td = document.createElement('td');
+    //per ciascun td, inserisco i numeri presenti nell'array tabellone
+            td.innerText = tabellone[i * 10 + j];
+    //appendo la casella alla riga
+            tr.appendChild(td);
+        }
+    //appendo la riga alla tabella
+    tableElement.appendChild(tr);
+    }
+};
+
+generaTabellone(0); // Estrai e modifica la prima casella
+
 
