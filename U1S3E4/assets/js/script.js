@@ -20,17 +20,29 @@ const tabellone = []; //un array che conterrà le caselle del tabellone
 for (let i = 1; i <= 90; i++) {
     tabellone.push(i);
 }
-
+//definisco una variabile e la associo all'elemento tabella presente in html
 const tableElement = document.querySelector('table');
 
 const generaTabellone = () => {
     //creo le righe da 1 a 9
     for (let i = 0; i < 9; i++) {
         const tr = document.createElement('tr');
-    //per ciascuna riga, creo 10 td
+    //e per ciascuna riga, creo 10 td
         for (let j = 0; j < 10; j++) {
             const td = document.createElement('td');
-    //per ciascun td, inserisco i numeri presenti nell'array tabellone
+    //per ciascun td, inserisco al suo interno un testo.
+    //questo testo sarà il risultato tra (1<i<9)*10 + j
+    //quindi per esempio:
+    // 0*10 + 1 = 1
+    // 1*10 + 1 = 11
+    // 2*10 + 1 = 21
+    // 3*10 + 1 = 31
+    //...
+    //0*10 + 2 = 2
+    //1*10 + 2 = 22
+    //...
+    //fino a
+    //8*10 + 10 = 90
             td.innerText = tabellone[i * 10 + j];
     //appendo la casella alla riga
             tr.appendChild(td);
