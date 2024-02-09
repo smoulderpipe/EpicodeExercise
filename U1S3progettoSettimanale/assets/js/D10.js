@@ -293,7 +293,7 @@ function deleteProp(parObj, parString) {
   console.log(parObj);
   return parObj;
 }
-
+console.log('****** ESERCIZIO 11 ******');
 deleteProp(parObj, parString);
 
 /********/
@@ -418,7 +418,23 @@ const movies = [
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 
+  function piuVecchio() {
+    let anno = 1200;
+    movies.forEach((element) => {
+      //Number trasforma un valore di tipo stringa, booleano o altro in un numero.
+      //se l'anno è inferiore a 2100
+      //anno corrisponde al valore riportato nella proprietà year degli oggetti dell'array
+      if (Number(element.Year) > anno) {
+        anno = Number(element.Year);
+        titolo = element.Title;
+      }
+    });
+    console.log(`il film più recente è del ${anno} e si chiama "${titolo}"`);
+  }
+  console.log('****** ESERCIZIO 12 ******');
+  piuVecchio();
 
+  
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
