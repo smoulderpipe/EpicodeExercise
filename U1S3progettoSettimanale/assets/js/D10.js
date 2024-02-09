@@ -17,6 +17,7 @@ REGOLE
 
 let sum;
 sum = 10 + 20;
+console.log('****** ESERCIZIO A ******');
 console.log(sum);
 
 
@@ -26,6 +27,7 @@ console.log(sum);
 
 let random;
 random = Math.floor(Math.random() * 21);
+console.log('****** ESERCIZIO B ******');
 console.log(random);
 
 
@@ -39,6 +41,7 @@ let me = {
   age: 32,
 };
 
+console.log('****** ESERCIZIO C ******');
 console.log(me);
 console.log(me.name);
 console.log(me.surname);
@@ -49,6 +52,7 @@ console.log(me.age);
 */
 
 delete me.age;
+console.log('****** ESERCIZIO D ******');
 console.log(me);
 
 /* ESERCIZIO E
@@ -56,6 +60,7 @@ console.log(me);
 */
 
 me.skills = ["HTML", "CSS", "Javascript principiante"];
+console.log('****** ESERCIZIO E ******');
 console.log(me);
 
 
@@ -64,6 +69,7 @@ console.log(me);
 */
 
 me.skills.push('<del>Javascript intermedio?</del> non ancora');
+console.log('****** ESERCIZIO F ******');
 console.log(me);
 
 /* ESERCIZIO G
@@ -71,6 +77,7 @@ console.log(me);
 */
 
 delete me.skills;
+console.log('****** ESERCIZIO G ******');
 console.log(me);
 
 // Funzioni
@@ -84,6 +91,7 @@ function dice() {
   console.log(randomDice);
 }
 
+console.log('****** ESERCIZIO 1 ******');
 dice();
 
 /* ESERCIZIO 2
@@ -100,6 +108,7 @@ function whoIsBigger(number1, number2){
   }
 }
 
+console.log('****** ESERCIZIO 2 ******');
 whoIsBigger(8, 4);
 whoIsBigger(3, 9);
 whoIsBigger(5, 5);
@@ -118,6 +127,7 @@ function splitMe(stringa) {
   return ogniParola;
 }
 
+console.log('****** ESERCIZIO 3 ******');
 console.log(parole);
 
 /* ESERCIZIO 4
@@ -135,6 +145,7 @@ function deleteOne(stringa, bool) {
   }
 }
 
+console.log('****** ESERCIZIO 4 ******');
 console.log(deleteOne(parola, true));
 console.log(deleteOne(parola, false));
 
@@ -146,13 +157,66 @@ console.log(deleteOne(parola, false));
 
 
 
+
+//quando passo il parametro stringa alla funzione
+//creo due nuove variabili: una chiamata "nuovaStringa" di tipo stringa, e una chiamata "spazio" di tipo booleano
+//creo un ciclo for per un nuovo array che creerò dentro il for
+//il nuovo array si chiamerà "char" e avrà come elementi interni tutti caratteri
+
+// function onlyLetters(stringa) {
+//   let nuovaStringa = "";
+//   let spazio = false;
+//   for (let i = 0; i < stringa.length; i++) {
+//     const char = stringa[i];
+//     if (isNaN(char)) {
+//       nuovaStringa += char;
+//     }
+//   }
+//   return nuovaStringa;
+// }
+
+// const frase2 = "Dieci 9 otto 7 sei 5 quattro 3 due 1";
+// const soloLettere = onlyLetters(frase2);
+// console.log(soloLettere);
+
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+stringaEmail = 'unduetre@gmail.com'
+stringaNonEmail = 'unduetre@gmail'
+
+function isThisAnEmail2(stringa) {
+  const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let risultato = regex.test(stringa);
+  if (risultato === true) {
+    console.log(stringa + ' è una mail valida');
+  } else {
+    console.log(stringa + ' non è una mail valida');
+  }
+  return risultato;
+}
+
+console.log('****** ESERCIZIO 6 ******');
+isThisAnEmail2(stringaEmail);
+isThisAnEmail2(stringaNonEmail);
+
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+
+const data1 = new Date();
+const settimana = ["domenica", "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato"]
+
+function whatDayIsIt() {
+  let giornoInNumeri = data1.getDay();
+  return settimana[giornoInNumeri];
+}
+
+console.log('****** ESERCIZIO 7 ******');
+console.log('oggi è ' + whatDayIsIt()); // Stampa il numero del giorno
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
