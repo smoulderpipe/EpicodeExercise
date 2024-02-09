@@ -482,9 +482,47 @@ onlyInLastMillennium();
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+let sumAllTheYears = () => {
+let sommaAnni = 0;
+  for (let i = 0; i < movies.length; i++) {
+    sommaAnni += Number(movies[i].Year);
+  }
+console.log(sommaAnni);
+}
+
+sumAllTheYears();
+
+
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+
+// let searchByTitle = (stringa3) => {
+//   const soloTitoli = [];
+// for (let i = 0; i < movies.length; i++) {
+//   soloTitoli.push(movies[i].Title);
+// }
+// console.log(soloTitoli);
+// }
+
+// searchByTitle();
+
+// //
+// let searchByTitle = (stringa3) => {
+//   movies.forEach((element) => {
+  
+
+//   });
+
+// }
+
+
+// //questa l'abbiamo fatta nell'esercizio del calendario)
+// appointmentsForThisDay.forEach((appointment) => {
+//         const newLi = document.createElement('li');
+//         newLi.innerText = appointment;
+//         appointmentsList.appendChild(newLi);
+//     });
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
