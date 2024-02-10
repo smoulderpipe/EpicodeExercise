@@ -88,11 +88,13 @@ console.log(me);
 
 function dice() {
   let randomDice = Math.floor(Math.random() * 6 + 1);
-  console.log(randomDice);
+  return randomDice;
 }
 
+const risultatoLancioDado = dice();
+
 console.log('****** ESERCIZIO 1 ******');
-dice();
+console.log(risultatoLancioDado);
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -231,6 +233,24 @@ console.log('oggi è ' + whatDayIsIt()); // Stampa il numero del giorno
   }
 */
 
+const oggettoFinale = {};
+
+function rollTheDices(numeroLanci) {
+  let sum = 0;
+  let risultatiLanci = [];
+  for (let i = 0; i < numeroLanci; i++) {
+    risultatiLanci.push(dice());
+  }
+  for (let i = 0; i < risultatiLanci.length; i++) {
+    sum += risultatiLanci[i];
+  }
+  oggettoFinale.sum = sum;
+  oggettoFinale.values = risultatiLanci;
+  console.log(oggettoFinale);
+}
+
+console.log('****** ESERCIZIO 8 ******')
+rollTheDices(3);
 
 
 /* ESERCIZIO 9
@@ -418,7 +438,7 @@ const movies = [
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 
-function piuVecchio() {
+function newestMovie() {
   let anno = 1200;
   movies.forEach((element) => {
     //Number trasforma un valore di tipo stringa, booleano o altro in un numero.
@@ -432,7 +452,7 @@ function piuVecchio() {
   console.log(`Il film più recente dell'array movies è del ${anno} e si intitola "${titolo}"`);
 }
 console.log('****** ESERCIZIO 12 ******');
-piuVecchio();
+newestMovie();
 
 
 
@@ -487,9 +507,10 @@ let sommaAnni = 0;
   for (let i = 0; i < movies.length; i++) {
     sommaAnni += Number(movies[i].Year);
   }
-console.log(sommaAnni);
+console.log('La somma degli anni di tutti i film è ' + sommaAnni);
 }
 
+console.log('****** ESERCIZIO 16 ******');
 sumAllTheYears();
 
 
