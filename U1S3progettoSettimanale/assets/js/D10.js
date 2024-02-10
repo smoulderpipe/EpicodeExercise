@@ -157,29 +157,24 @@ console.log(deleteOne(parola, false));
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+let onlyLetters = (stringaPar) => {
+  let stringaOnlyLettersWithoutNumbers = "";
+  const arrayOnlyLettersWithoutNumbers = [];
+  for (let i = 0; i < stringaPar.length; i++) {
+    const char = stringaPar[i];
+    if (!isNaN(char) && char !== " ") {
+      continue;
+    }
+      arrayOnlyLettersWithoutNumbers.push(char);
+  }
+  stringaOnlyLettersWithoutNumbers = arrayOnlyLettersWithoutNumbers.join("");
+  console.log(stringaOnlyLettersWithoutNumbers);
+  return stringaOnlyLettersWithoutNumbers;
+}
 
+console.log('****** ESERCIZIO 5 ******')
 
-
-//quando passo il parametro stringa alla funzione
-//creo due nuove variabili: una chiamata "nuovaStringa" di tipo stringa, e una chiamata "spazio" di tipo booleano
-//creo un ciclo for per un nuovo array che creerò dentro il for
-//il nuovo array si chiamerà "char" e avrà come elementi interni tutti caratteri
-
-// function onlyLetters(stringa) {
-//   let nuovaStringa = "";
-//   let spazio = false;
-//   for (let i = 0; i < stringa.length; i++) {
-//     const char = stringa[i];
-//     if (isNaN(char)) {
-//       nuovaStringa += char;
-//     }
-//   }
-//   return nuovaStringa;
-// }
-
-// const frase2 = "Dieci 9 otto 7 sei 5 quattro 3 due 1";
-// const soloLettere = onlyLetters(frase2);
-// console.log(soloLettere);
+onlyLetters('I have 4 dogs!');
 
 
 /* ESERCIZIO 6
@@ -616,6 +611,17 @@ setRed();
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+
+let aggiungiLi = () => {
+const li = document.createElement("li");
+const ul = document.getElementById("myList");
+li.innerText = "****** ESERCIZIO 24 ******";
+ul.appendChild(li);
+return;
+}
+
+aggiungiLi();
+
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
