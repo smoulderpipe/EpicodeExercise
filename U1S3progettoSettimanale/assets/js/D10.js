@@ -513,32 +513,40 @@ sumAllTheYears();
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
-// let searchByTitle = (stringa3) => {
-//   const soloTitoli = [];
-// for (let i = 0; i < movies.length; i++) {
-//   soloTitoli.push(movies[i].Title);
+
+// let searchByTitle = (testString) => {
+
+//   for (let i = 0; i < movies.length; i++) {
+//     const titoloFilm = movies[i].Title;
+//     if (titoloFilm === testString) {
+//       console.log(titoloFilm);
+//     } 
+//   }
 // }
-// console.log(soloTitoli);
-// }
-
-// searchByTitle();
-
-// //
-// let searchByTitle = (stringa3) => {
-//   movies.forEach((element) => {
-  
-
-//   });
-
-// }
+// console.log("****** ESERCIZIO 17 ******");
+// searchByTitle("The Avengers");
 
 
-// //questa l'abbiamo fatta nell'esercizio del calendario)
-// appointmentsForThisDay.forEach((appointment) => {
-//         const newLi = document.createElement('li');
-//         newLi.innerText = appointment;
-//         appointmentsList.appendChild(newLi);
-//     });
+let searchByTitle = (testString) => {
+  let nessunoTrovato = 0;
+const arrayConfronto = [];
+  for (let i = 0; i < movies.length; i++) {
+    const titoloCercato = movies[i].Title.toLowerCase();
+    const filmCorrispondente = movies[i];
+    if (titoloCercato == testString.toLowerCase()) {
+      console.log(filmCorrispondente);
+    } else {
+      nessunoTrovato = nessunoTrovato + 1;
+      arrayConfronto.push(nessunoTrovato);
+    }
+  }
+  if (arrayConfronto.length === movies.length) {
+    console.log("nessun film corrispondente trovato");
+  }
+}
+console.log("****** ESERCIZIO 17 ******");
+console.log("la tua ricerca ha prodotto i seguenti risultati:");
+searchByTitle("The Avengers");
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -611,10 +619,10 @@ setRed();
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-
-let aggiungiLi = () => {
 const li = document.createElement("li");
 const ul = document.getElementById("myList");
+
+let aggiungiLi = () => {
 li.innerText = "****** ESERCIZIO 24 ******";
 ul.appendChild(li);
 return;
@@ -627,9 +635,29 @@ aggiungiLi();
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+/*se per "svuotare" si intende eliminare anche i li precedentemente creati, farei come segue*/
+
+let svuotaUL = () => {
+  ul.innerHTML = "";
+}
+
+svuotaUL();
+
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+let aggiungiClasseTest = () => {
+  const tr = document.querySelectorAll("tr");
+  console.log(tr);
+  for (let i = 0; i < tr.length; i++) {
+    tr[i].classList.add("test");
+  }
+  return tr;
+}
+
+aggiungiClasseTest();
 
 // [EXTRA] JS Avanzato
 
