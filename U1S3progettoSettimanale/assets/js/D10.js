@@ -560,9 +560,27 @@ sumAllTheYears();
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+let selezionaContainer = () => {
+  let containerElement = document.getElementById("container");
+  containerElement.innerText = "****** ESERCIZIO 20 ******";
+  return containerElement;
+}
+selezionaContainer();
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+
+let selezionaTd = () => {
+  let tdElements = document.getElementsByTagName("td");
+  console.log(tdElements);
+  for (let i = 0; i < tdElements.length; i++) {
+    tdElements[i].innerText = "****** ESERCIZIO 21 ******";
+  }
+  return tdElements;
+}
+
+selezionaTd();
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
