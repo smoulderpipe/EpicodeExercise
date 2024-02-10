@@ -604,6 +604,15 @@ console.log('Il testo che è presente nei TD è il seguente: ' + consoleTags());
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+let setRed = () => {
+  const links = document.querySelectorAll("a");
+  for (let i = 0; i < links.length; i++) {
+    links[i].style.backgroundColor = "red";
+  }
+};
+
+setRed();
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
