@@ -480,8 +480,6 @@ onlyTheYears();
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
-
-
 let onlyInLastMillennium = () =>
 movies.forEach((element) => {
   if (Number(element.Year) < 2000) {
@@ -556,6 +554,19 @@ searchByTitle("The Avengers");
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+function removeIndex(numeroDaTogliere) {
+  for (let i = 0; i < movies.length; i++) {
+    const filmCorrispondente = movies[i];
+    if (movies.indexOf(filmCorrispondente) === numeroDaTogliere) {
+      movies[i] = "";
+    }
+  }
+  console.log(movies);
+  return movies;
+}
+console.log("****** ESERCIZIO 18 ******");
+removeIndex(3);
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
