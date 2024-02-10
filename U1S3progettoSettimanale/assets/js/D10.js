@@ -571,11 +571,13 @@ selezionaContainer();
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
+let tdElements = [];
+
 let selezionaTd = () => {
-  let tdElements = document.getElementsByTagName("td");
+  tdElements = document.getElementsByTagName("td");
   console.log(tdElements);
   for (let i = 0; i < tdElements.length; i++) {
-    tdElements[i].innerText = "****** ESERCIZIO 21 ******";
+    tdElements[i].innerText = " ESERCIZIO 21 "; //ho anche inserito del testo per vedere se funzionava la selezione, so che è superfluo rispetto alle richieste dell'esercizio
   }
   return tdElements;
 }
@@ -585,6 +587,18 @@ selezionaTd();
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+
+let consoleTags = () => {
+  const tdElements = document.getElementsByTagName("td");
+  const cosaContengono = [];
+ for (let i = 0; i < tdElements.length; i++) {
+  cosaContengono.push(tdElements[i].innerText);
+}
+console.log(cosaContengono);
+return cosaContengono;
+}
+console.log('****** ESERCIZIO 22 ******');
+console.log('Il testo che è presente nei TD è il seguente: ' + consoleTags());
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
