@@ -6,9 +6,9 @@
     }
 #to-top-icon {
     position: fixed;
-    bottom: 0px;
+    bottom: 10px;
     right: 0px;
-    padding: 5px;
+    padding: 5px 5px 0px 5px;
   background: rgba(255, 255, 255, 0.7);
   margin-bottom: -5px;
   border: 2px solid white;
@@ -16,12 +16,20 @@
 
   
 }
+aside .fa-tag
+{
+    position: absolute;
+    top: 10px;
+  right: 10px;
+  font-size: 4rem;
+  opacity: 0.1;
+}
 
 #calendar-icon {
     position: fixed;
-    top: 90px;
+    top: 80px;
     right: 0;
-    padding: 5px;
+    padding: 5px 5px 0px 5px;
   background: rgba(255, 255, 255, 0.7);
   border: 2px solid white;
   border-radius: 10px;
@@ -32,7 +40,7 @@
     position: fixed;
   top: 15px;
   right: 0;
-  padding: 5px;
+  padding: 5px 5px 0px 5px;
   background: rgba(255, 255, 255, 0.7);
   border: 2px solid white;
   border-radius: 10px;
@@ -155,6 +163,13 @@ article img {
     width: 50px;
     float: left;
     margin-right: 20px;
+    
+}
+
+#html-badge {
+    border: 4px solid #00a0c6;
+  outline: 4px solid #a02571;
+  padding: 2px;
 }
 
 /* TABELLE */
@@ -216,6 +231,7 @@ aside div {
     border: 1px solid #c3c3c3;
     margin-bottom: 1em;
     padding: 1em;
+    position: relative;
 }
 aside div p:last-child {
     margin-bottom: 0;
@@ -261,6 +277,8 @@ h1 {
     margin-bottom: 0;
     width: 283px;
 }
+
+
 
 .decorations img {
     width: 283px;
