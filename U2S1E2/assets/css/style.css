@@ -1,4 +1,16 @@
-/* IMPOSTAZIONI GENERALI */
+.material-symbols-outlined {
+    color: white;
+    background: #f7555d;
+    font-size: 36px;
+    }
+.to-top-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+    
+    /* IMPOSTAZIONI GENERALI */
 html {font-size: 62.5%;}
 body { 
     font-family: Poppins, 'Helvetica Neue', sans-serif;
@@ -104,6 +116,8 @@ iframe {
 
 article img {
     width: 50px;
+    float: left;
+    margin-right: 20px;
 }
 
 /* TABELLE */
@@ -252,11 +266,27 @@ button {
         max-width: inherit;
         
     }
+
+    section h2 {
+        position: absolute;
+  padding: 8px 20px;
+  margin-top: -52px;
+  margin-left: 0px;
+    }
+
+    section {
+        padding: 2em 2em 0em 2em;
+    }
+
+    .decorations {
+        margin-bottom: 30px;
+    }
     .decorations img {
         width: 420px;
       top: -4px;
       position: relative;
       left: 375px;
+      
     }
 
     header p, header ul, header nav, header div {
@@ -268,7 +298,7 @@ button {
     header div img {
         width: 160px;
         height: auto;
-        margin-right: 20px;
+        margin-right: 10px;
     }
     header div {
         align-items: center;
@@ -283,6 +313,8 @@ button {
         justify-content: space-between;
         padding: 1em 2em;
         align-items: center;
+        position: sticky;
+    top: 0;
     }
     aside div {
         width: 33%;
