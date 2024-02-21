@@ -9,7 +9,6 @@ header {
     background: #fef7e2;
     margin-right: 30px;
     padding: 0px 20px 0px 20px;
-    min-width: 200px;
     position: sticky;
     top: 0;
     align-self: flex-start;
@@ -31,6 +30,7 @@ header li img {
 
 header ul {
     padding: 0;
+    padding-top: 10px;
 }
 
 header a {
@@ -41,14 +41,14 @@ header a {
     margin-bottom: 20px;
     display: block;
     text-decoration: none;
-    color: #4B1919;
+    color: #78290c;
     text-transform: capitalize;
     text-align: center;
     font-weight: 600;
     display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 main {
@@ -64,6 +64,13 @@ main {
 .news-card img {
     width: 100%;
 }
+
+.news-card p {
+    color: #78290c;
+    line-height: 1.5em;
+    font-size: 1.1em;
+
+}
 .product-container {
     background: #fef7e2;
     padding: 0px 0px 20px 0px;
@@ -77,28 +84,28 @@ main {
     margin-bottom: 40px;
 }
 
-div.product-container:nth-child(5) {
-    display: none;
-}
+
 .product-container a {
     text-decoration: none;
-    color: #4B1919;
+    color: #78290c;
 }
 h2 {
-    color: #4B1919;
+    color: #78290c;
     font-size: 3em;
     font-weight: 900;
+    margin-top: 20px;
 }
 h3 {
-    color: #4B1919;
+    color: #78290c;
     font-size: 2.5em;
     font-weight: 900;
     margin-top: 0;
+    margin-bottom: 10px;
 }
 h4 {
-    color: #4B1919;
+    color: #78290c;
     font-size: 1.5em;
-    font-weight: 900;
+    font-weight: 1000;
     margin: 0;
 }
 .product-img {
@@ -135,7 +142,7 @@ h4 {
 
 .product-info {
     display: flex;
-    color: #4B1919;
+    color: #78290c;
     padding: 20px 20px 0px 10px;
     gap: 20px;
 }
@@ -160,8 +167,34 @@ h4 {
     margin-top: 5px;
 }
 
+@media screen and (max-width: 767px) {
+    .product-container:nth-child(5) {
+        display: block;
+    }
+}
+
 @media screen and (min-width: 768px) {
-    .finto-body {
+    body {
         display: flex;
+    }
+
+    .product-container:nth-child(5) {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .product-container:nth-child(5) {
+        display: block;
+    }
+    .news-card {
+        display: flex;
+  flex-direction: row-reverse;
+
+    }
+
+    .news-card img {
+        width: auto;
+        margin-right: 30px;
     }
 }
