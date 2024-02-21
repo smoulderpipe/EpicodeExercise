@@ -11,8 +11,6 @@ header {
     padding: 0px 20px 0px 20px;
     position: sticky;
     top: 0;
-    align-self: flex-start;
-    height: 100vh;
 }
 
 header li {
@@ -168,12 +166,45 @@ h4 {
 }
 
 @media screen and (max-width: 767px) {
+
+    header a {
+        padding: 25px;
+    }
     .product-container:nth-child(5) {
         display: block;
+    }
+
+    .products-container {
+        flex-direction: column;
+    }
+    header {
+        margin-right: 0;
+    }
+
+    header ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    header li {
+        min-width: 48%;
+    }
+
+    header ul li:nth-child(1) {
+        flex-grow: 2;
+    }
+
+    main {
+        padding: 20px;
     }
 }
 
 @media screen and (min-width: 768px) {
+    header {
+        align-self: flex-start;
+    height: 100vh;
+    }
     body {
         display: flex;
     }
