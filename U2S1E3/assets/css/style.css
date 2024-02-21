@@ -1,0 +1,167 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background: #fef7e2;
+    margin-right: 30px;
+    padding: 0px 20px 0px 20px;
+    min-width: 200px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header span {
+    font-size: 1.8em;
+
+    text-transform: uppercase;
+}
+header li img {
+    width: 40px;
+}
+
+header ul {
+    padding: 0;
+}
+
+header a {
+    background: #ffdf7f;
+    border: 0;
+    padding: 35px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none;
+    color: #4B1919;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+main {
+    padding-right: 30px;
+}
+
+.news-card {
+    background: #fef7e2;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.news-card img {
+    width: 100%;
+}
+.product-container {
+    background: #fef7e2;
+    padding: 0px 0px 20px 0px;
+    border-radius: 40px;
+    flex-grow: 1;
+}
+
+.products-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+div.product-container:nth-child(5) {
+    display: none;
+}
+.product-container a {
+    text-decoration: none;
+    color: #4B1919;
+}
+h2 {
+    color: #4B1919;
+    font-size: 3em;
+    font-weight: 900;
+}
+h3 {
+    color: #4B1919;
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-top: 0;
+}
+h4 {
+    color: #4B1919;
+    font-size: 1.5em;
+    font-weight: 900;
+    margin: 0;
+}
+.product-img {
+    height: 200px;
+    background-image: url(../imgs/honey.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.product-button {
+    background: #ffdf7f;
+    border: 0;
+    padding: 10px 40px;
+    border-radius: 30px;
+}
+
+.container img {
+    width: 100%;
+}
+
+.product-price {
+    flex-grow: 0.5;
+    align-items: center;
+    display: flex;
+    min-width: 40px;
+}
+
+.product-head {
+    flex-grow: 2;
+}
+
+.product-info {
+    display: flex;
+    color: #4B1919;
+    padding: 20px 20px 0px 10px;
+    gap: 20px;
+}
+
+.product-info p {
+    text-align: center;
+}
+
+.product-button-container {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.product-title {
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.product-sub {
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .finto-body {
+        display: flex;
+    }
+}
