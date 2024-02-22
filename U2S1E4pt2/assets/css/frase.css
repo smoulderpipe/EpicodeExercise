@@ -21,7 +21,7 @@ main {
 
 .parole {
     position: relative;
-    display: inline;
+    white-space: nowrap;
 	left: 10px;
 }
 
@@ -29,7 +29,7 @@ main {
     position: absolute;
     top: 0;
     color: transparent;
-    animation: parole 6s linear infinite 0s;
+    animation: parole 6s cubic-bezier(0,.64,.21,.99) infinite 0s;
     min-width: 300px;
 }
 
