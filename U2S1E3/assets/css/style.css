@@ -168,7 +168,7 @@ h4 {
 @media screen and (max-width: 767px) {
 
     header a {
-        padding: 25px;
+        padding: 20px;
     }
     .product-container:nth-child(5) {
         display: block;
@@ -193,6 +193,7 @@ h4 {
 
     header ul li:nth-child(1) {
         flex-grow: 2;
+        min-width: 100%;
     }
 
     main {
@@ -209,9 +210,9 @@ h4 {
         display: flex;
     }
 
-    .product-container:nth-child(5) {
+    /* .product-container:nth-child(5) {
         display: none;
-    }
+    } */
 }
 
 @media screen and (min-width: 1400px) {

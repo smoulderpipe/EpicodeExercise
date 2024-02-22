@@ -20,6 +20,8 @@ verificare che il numero estratto non sia già uscito: se è uscito, estrarre un
 
 const tabellone = []; //un array che conterrà le caselle del tabellone
 
+
+//metti dentro l'array tabellone tutti i numeri da 1 a 90
 for (let i = 1; i <= 90; i++) {
     tabellone.push(i);
 }
@@ -100,38 +102,25 @@ function inserisciNumeriCartelle() {
 
 inserisciNumeriCartelle();
 
+
 const numeroEstrattoDOM = document.getElementById("numero-estratto");
 const estraiNumeroButton = document.getElementById("estrai-numero");
 const numeriEstratti = [];
+
 
 let estraiNumero = (tabellone) => {
     // e.preventDefault();
     let numeroEstratto;
     let estratto = false;
-
-    while (!estratto) {
+    for (let i = 0; i < tabellone.length; i++) {
         numeroEstratto = Math.floor(Math.random() * tabellone.length + 1);
-    
         // Controlla se il numero è già stato estratto
         if (numeriEstratti.includes(numeroEstratto) || numeroEstratto === 0) {
             continue; // Se sì, riprova
         } else {
-            estratto = true; // Se no, esci dal ciclo
+            break; // Se no, esci dal ciclo
         }
     }
-    
-    // for (let i = 0; i < tabellone.length; i++) {
-    //     numeroEstratto = Math.floor(Math.random() * tabellone.length + 1);
-    
-    //     // Controlla se il numero è già stato estratto
-    //     if (numeriEstratti.includes(numeroEstratto) || numeroEstratto === 0) {
-    //         continue; // Se sì, riprova
-    //     } else {
-    //         break; // Se no, esci dal ciclo
-    //     }
-    // }
-
-  
 
     numeriEstratti.push(numeroEstratto); // Aggiungi il numero estratto all'array
 
@@ -150,10 +139,23 @@ let estraiNumero = (tabellone) => {
 };
 
 estraiNumeroButton.addEventListener("click", () => {
-    if (numeriEstratti.length < 90) {
+  
+    if (numeriEstratti.length < tabellone.length) {
         estraiNumero(tabellone);
     } else {
         window.alert("Fine del gioco! Ti va di fare un'altra partita?");
         location.reload();
     }
 });
+
+
+    // while (!estratto) {
+    //     numeroEstratto = Math.floor(Math.random() * tabellone.length + 1);
+    
+    //     // Controlla se il numero è già stato estratto
+    //     if (numeriEstratti.includes(numeroEstratto) || numeroEstratto === 0) {
+    //         continue; // Se sì, riprova
+    //     } else {
+    //         estratto = true; // Se no, esci dal ciclo
+    //     }
+    // }
