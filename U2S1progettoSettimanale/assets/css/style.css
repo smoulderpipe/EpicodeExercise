@@ -153,7 +153,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.trending-details {
+.trending-details, .feed-info-last-row a, .feed-into-main p {
     color: gray;
 }
 
@@ -184,13 +184,11 @@ margin-left: 3px;
 
  .feed-info-last-row a {
     background: #e7e6e4;
-    color: grey;
     padding: 5px 10px;
     border-radius: 15px;
  }
 
  .feed-into-main p {
-    color: grey;
     font-size: 1.1em;
  }
 
@@ -300,18 +298,6 @@ text-transform: capitalize;
     position: relative;
     top: 10px;
  }
-/* 
- .aside-main-discovers a {
-    flex-grow: 1;
- } */
- /* .feed-image-1 {
-    background: url(../imgs/image08.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 550px;
-    background-position: center;
-    margin-left: 30px;
- } */
 
  .green-background {
     background: green !important;
@@ -369,6 +355,10 @@ text-transform: capitalize;
 }
 
 @media screen and (min-width: 768px) and (max-width:1023px) {
+
+    .hero-main {
+        width: 75%;
+    }
     .trending-container {
    width: 33%;
    margin-bottom: 20px;
