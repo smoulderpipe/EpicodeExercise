@@ -1,9 +1,14 @@
 body {
     font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
+}
+
+.white-background {
+    background: white;
 }
 
 header li {
@@ -25,6 +30,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
+    transition: 0.5s;
 }
 
 header a {
@@ -44,6 +50,7 @@ header ul a:nth-child(5), #hero a {
 
 main {
     padding: 40px 150px;
+    
 }
 
 
@@ -232,6 +239,7 @@ margin-left: 3px;
  #home-feed-and-aside {
     display: flex;
     padding-top: 70px;
+    position: relative;
  }
 
  .feed-image {
@@ -247,6 +255,10 @@ margin-left: 3px;
 
  aside {
     padding-left: 70px;
+    position: sticky;
+    top: 100px;
+    padding-top: 50px;
+    align-self: flex-start;
  }
 
  aside ul li {
