@@ -210,20 +210,28 @@ margin-left: 3px;
 
  #trending-on-medium {
     padding-bottom: 40px;
-    border-bottom: 1px solid #e7e6e4;
+ }
+ 
+ hr {
+    width: 100vw;
+    left: 0;
+    position: absolute;
+    border: 0.5px solid #e7e6e4;
+    margin-top: 40px;
  }
 
  #home-feed {
-    padding-top: 70px;
     display: flex;
     flex-direction: column;
     gap: 70px;
+    min-width: 60%;
  }
  .feed-container > img:nth-child(2) {
     margin-left: 30px;
  }
  #home-feed-and-aside {
     display: flex;
+    padding-top: 70px;
  }
 
  .feed-image {
@@ -236,6 +244,43 @@ margin-left: 3px;
     vertical-align:middle;
     margin-left: 30px;
  }
+
+ aside {
+    padding-left: 70px;
+ }
+
+ aside ul li {
+list-style-type: none;
+text-transform: capitalize;
+ }
+
+ aside ul {
+    display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+ }
+
+ aside a {
+    color: grey;
+    
+ }
+
+ .aside-main-discovers a {
+    padding: 5px 10px;
+    border: 1px solid grey;
+    margin-right: 5px;
+    margin-top: 5px;
+ }
+
+ .aside-main-tags {
+    gap: 10px;
+    position: relative;
+    top: 10px;
+ }
+/* 
+ .aside-main-discovers a {
+    flex-grow: 1;
+ } */
  /* .feed-image-1 {
     background: url(../imgs/image08.jpeg);
     background-size: cover;
