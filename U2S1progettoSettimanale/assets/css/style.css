@@ -40,7 +40,10 @@ header a {
 
 header ul a:nth-child(5) {
     padding: 10px 20px;
+    transition: 0.5s;
 }
+
+
 
 header ul a:nth-child(5), #hero a {
     color: white;
@@ -301,3 +304,7 @@ text-transform: capitalize;
     background-position: center;
     margin-left: 30px;
  } */
+
+ .green-background {
+    background: green !important;
+}
