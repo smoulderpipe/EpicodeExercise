@@ -357,7 +357,12 @@ text-transform: capitalize;
 @media screen and (min-width: 768px) and (max-width:1023px) {
 
     .hero-main {
-        width: 75%;
+        flex-grow: 2;
+        min-width: 400px;
+    }
+
+    .svg-container {
+        flex-shrink: 2;
     }
     .trending-container {
    width: 33%;
