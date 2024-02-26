@@ -19,3 +19,10 @@ U1S3progettoSettimanale - HTML e JS -> Esercizi JS
 U1S4BuildWeek1 - HTML, CSS e Javascript - Benchmark Epicode
 
 U2S1E1 - CSS - Responsiveness, ux, ui, media queries
+U2S1E2 - CSS - Posizionare elementi in un layout
+U2S1E3 - CSS - Flexbox
+U2S1E4pt1 - CSS - Animazioni
+U2S1E4pt2 - CSS - Animazioni
+U2S1progettoSettimanale - Medium clone
+
+U2S2E1 - CSS - Bootstrap
