@@ -116,7 +116,7 @@ let estraiNumero = (tabellone) => {
         numeroEstratto = Math.floor(Math.random() * tabellone.length + 1);
         // Controlla se il numero è già stato estratto
         if (numeriEstratti.includes(numeroEstratto) || numeroEstratto === 0) {
-            continue; // Se sì, riprova
+            estraiNumero(); // Se sì, riprova
         } else {
             break; // Se no, esci dal ciclo
         }
@@ -143,8 +143,13 @@ estraiNumeroButton.addEventListener("click", () => {
     if (numeriEstratti.length < tabellone.length) {
         estraiNumero(tabellone);
     } else {
-        window.alert("Fine del gioco! Ti va di fare un'altra partita?");
-        location.reload();
+        let ricomincia = window.confirm("Fine del gioco! Ti va di fare un'altra partita?");
+        if (ricomincia) {
+            location.reload();
+        }
+        else {
+            alert('Piacere di aver giocato con te!');
+        }
     }
 });
 
