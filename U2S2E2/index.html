@@ -30,7 +30,7 @@ Recensioni -->
 </head>
 
 <body>
-    <header class="pt-1 px-5 pb-0 bg-light position-sticky sticky-top top-0" >
+    <header class="pt-1 px-5 pb-0 bg-light position-sticky sticky-top top-0">
 
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#"><img src="assets/img/travel-1883060_1280.png" width="60"></a>
@@ -54,7 +54,7 @@ Recensioni -->
                         <a class="nav-link" href="#lastMinute">Last Minute</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Recensioni</a>
+                        <a class="nav-link" href="#recensioni">Recensioni</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0 d-flex">
@@ -75,8 +75,8 @@ Recensioni -->
 3) Aggiungi una sezione introduttiva con il nome, il payoff dell'agenzia, 
 una breve descrizione in corsivo e una call-to-action (bottone) "Prenota ora" di colore azzurro chiaro e testo bianco e grassetto -->
 
-        <section class="container-fluid bg-light rounded p-5">
-            <div class="row w-75">
+        <section class="container-fluid bg-light rounded p-5 text-sm-center">
+            <div class="row w-lg-75">
                 <div class="col">
                     <h1 class="display-1 fw-bold">Woyage</h1>
                     <p class="h2 mb-4">We make you go WOW</p>
@@ -108,7 +108,7 @@ le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e test
         <section id="saldi" class="container-fluid p-5">
             <h2 class="h2">Saldi</h2>
             <div class="row text-dark">
-                <div class="col flex-shrink-1">
+                <div class="col flex-shrink-1 mb-3">
                     <div class="card border border-2 border-info">
                         <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -120,7 +120,7 @@ le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e test
                         </div>
                     </div>
                 </div>
-                <div class="col flex-shrink-1">
+                <div class="col flex-shrink-1 mb-3">
                     <div class="card border border-2 border-info">
                         <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -132,7 +132,7 @@ le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e test
                         </div>
                     </div>
                 </div>
-                <div class="col flex-shrink-1 d-sm-none d-md-flex">
+                <div class="col flex-shrink-1 d-sm-none d-md-flex mb-3">
                     <div class="card border border-2 border-info">
                         <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -172,7 +172,7 @@ In questa sezione dovranno esserci:
         <section id="welcomeSummer" class="container-fluid p-5">
             <h2 class="h2">Welcome Summer</h2>
             <div class="row g-2">
-                <div class="col flex-shrink-1">
+                <div class="col-md flex-shrink-1">
                     <div class="card shadow border-0">
                         <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -184,7 +184,7 @@ In questa sezione dovranno esserci:
                         </div>
                     </div>
                 </div>
-                <div class="col flex-shrink-1 mx-3">
+                <div class="col-md flex-shrink-1 mx-md-3 mx-sm-0">
                     <div class="card shadow border-0">
                         <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -196,7 +196,7 @@ In questa sezione dovranno esserci:
                         </div>
                     </div>
                 </div>
-                <div class="col flex-shrink-1 d-sm-none d-lg-flex">
+                <div class="col-md flex-shrink-1 d-sm-none d-lg-flex">
                     <div class="card shadow border-0">
                         <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -210,7 +210,7 @@ In questa sezione dovranno esserci:
                 </div>
             </div>
             <div class="row d-sm-none d-xl-flex g-2 mt-2">
-                <div class="col flex-shrink-1">
+                <div class="col-md flex-shrink-1">
                     <div class="card shadow border-0">
                         <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -222,7 +222,7 @@ In questa sezione dovranno esserci:
                         </div>
                     </div>
                 </div>
-                <div class="col flex-shrink-1 mx-3">
+                <div class="col-md flex-shrink-1 mx-md-3 mx-sm-0">
                     <div class="card shadow border-0">
                         <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -234,7 +234,7 @@ In questa sezione dovranno esserci:
                         </div>
                     </div>
                 </div>
-                <div class="col flex-shrink-1">
+                <div class="col-md flex-shrink-1">
                     <div class="card shadow border-0">
                         <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -264,13 +264,14 @@ e il badge sarà scuro -->
         <section class="container-fluid p-5 d-sm-none d-md-block">
             <h2 class="h2">Offerta del giorno</h2>
             <div class="row">
-                <div class="col-8">
-                    <img src="assets/img/mykonos.jpg" class="img-fluid w-100 rounded shadow" />
+                <div class="col-lg-8 col-4">
+                    <img src="assets/img/mykonos.jpg" class="img-fluid w-fluid rounded shadow" />
                 </div>
-                <div class="col-4">
-                    <h2 class="display-2 fw-lighter">Mykonos</h2>
-                    <p class="font-monospace fw-lighter fs-5">15.01.2021-31.01.2021</p>
-                    <p class="h3 fw-lighter">Ville a partire da 500 €, non fartelo sfuggire!</p>
+                <div class="col-lg-4 col-8">
+                    <h2 class="display-md-2 display-6 fw-lighter">Mykonos</h2>
+                    <p class="font-monospace fw-lighter fs-md-5 text-xs">15.01.2021-31.01.2021</p>
+                    <p class="fs-md-3 lh-sm fw-lighter fs-5">Ville a partire da 500 €, non fartelo sfuggire!</p>
+                    
                     <button class="mt-3 btn-dark rounded-pill text-white fw-bold text-uppercase border-0 px-4 py-2"
                         type="button">Best offer</button>
                 </div>
@@ -286,22 +287,22 @@ e il badge sarà scuro -->
         <section id="lastMinute" class="container-fluid p-5">
             <h2 class="h2">Last minute</h2>
             <div class="row">
-                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                <div class="col-lg-2 col-6 col-md-4 mb-3">
                     <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
                 </div>
-                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                <div class="col-lg-2 col-6 col-md-4 mb-3">
                     <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
                 </div>
-                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                <div class="col-lg-2 col-6 col-md-4 mb-3">
                     <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
                 </div>
-                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                <div class="col-lg-2 col-6 col-md-4 mb-3">
                     <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
                 </div>
-                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                <div class="col-lg-2 col-6 col-md-4 mb-3">
                     <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
                 </div>
-                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                <div class="col-lg-2 col-6 col-md-4 mb-3">
                     <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
                 </div>
             </div>
@@ -310,22 +311,70 @@ e il badge sarà scuro -->
 
 
         <!-- 10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
-Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra
+Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra -->
 
-11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci". -->
+        <section id="recensioni" class="container-fluid p-5">
+            <h2 class="h2 text-center">Dicono di noi</h2>
+            <div class="row justify-content-center">
+                <div class="col-1-md col-3 d-flex justify-content-end">
+                    <div style="background-image: url(assets/img/mykonos.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; min-width: 50px; height: 50px;"
+                        class="rounded-circle border border-2 border-info"></div>
+                </div>
+                <div class="col-11-md col-9">
+                    <p class="h6">Username</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-md col-3 d-flex justify-content-end">
+                    <div style="background-image: url(assets/img/mykonos.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; min-width: 50px; height: 50px;"
+                        class="rounded-circle border border-2 border-info"></div>
+                </div>
+                <div class="col-11-md col-9">
+                    <p class="h6">Username</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-md col-3 d-flex justify-content-end">
+                    <div style="background-image: url(assets/img/mykonos.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; min-width: 50px; height: 50px;"
+                        class="rounded-circle border border-2 border-info"></div>
+                </div>
+                <div class="col-11-md col-9">
+                    <p class="h6">Username</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+            </div>
 
-<!-- <section id="recensioni" class="container-fluid p-5">
-    <h2 class="h2 text-center">Dicono di noi</h2>
-    <div class="row">
-        <div class="col">
-            <div class=""
-        </div>
-        <div class="col"></div>
+
+        </section>
+
+    </main>
+
+    <!-- 11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci". -->
+
+    <div class="container-fluid text-center bg-dark p-5">
+        <button class="mt-3 btn-dark rounded-1 text-secondary border border-secondary border-1 px-4 py-2 m-4" type="button">Contattaci</button>
+        <p class="text-white text-capitalize">
+            &#169; 2021 Kalina Travel LTD. All rights reserved.
+        </p>
+        
     </div>
 
-</section> -->
+    <footer>
 
-<!-- EXTRAS
+    </footer>
+
+    <!-- EXTRAS
 
 12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
 
@@ -339,14 +388,6 @@ Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recension
 
 17) Crea una funzione che rimuova tutte le "card" dalla pagina -->
 
-
-
-
-
-    </main>
-    <footer>
-
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
