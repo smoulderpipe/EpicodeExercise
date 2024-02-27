@@ -30,14 +30,16 @@ Recensioni -->
 </head>
 
 <body>
-    <header class="pt-1 px-5 pb-0 bg-light position-sticky top-0" style="z-index: 1;">
+    <header class="pt-1 px-5 pb-0 bg-light position-sticky sticky-top top-0" >
+
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#"><img src="assets/img/travel-1883060_1280.png" width="60"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <!-- <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav"> -->
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home</a>
@@ -49,16 +51,17 @@ Recensioni -->
                         <a class="nav-link" href="#welcomeSummer">Welcome Summer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Last Minute</a>
+                        <a class="nav-link" href="#lastMinute">Last Minute</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Recensioni</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0 d-flex">
-                    <input class="form-control mr-sm-2 mx-3" type="search" placeholder="Posti da sogno" aria-label="Posti da sogno">
+                    <input class="form-control mr-sm-2 mx-3" type="search" placeholder="Posti da sogno"
+                        aria-label="Posti da sogno">
                     <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Cerca</button>
-                  </form>
+                </form>
             </div>
         </nav>
 
@@ -106,75 +109,54 @@ le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e test
             <h2 class="h2">Saldi</h2>
             <div class="row text-dark">
                 <div class="col flex-shrink-1">
-                <div class="card border border-2 border-info">
-                    <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Mykonos</h5>
-                      <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                      <a href="#" class="btn btn-info">Prenota
-                        ora</a>
+                    <div class="card border border-2 border-info">
+                        <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
+                                ora</a>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <div class="col flex-shrink-1">
                     <div class="card border border-2 border-info">
                         <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Mykonos</h5>
-                          <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                          <a href="#" class="btn btn-info">Prenota
-                            ora</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col flex-shrink-1 d-sm-none d-md-flex">
-                        <div class="card border border-2 border-info">
-                            <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Mykonos</h5>
-                              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                              <a href="#" class="btn btn-info">Prenota
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
                                 ora</a>
-                            </div>
-                          </div>
                         </div>
-                        <div class="col flex-shrink-1 d-sm-none d-lg-flex">
-                            <div class="card border border-2 border-info">
-                                <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Mykonos</h5>
-                                  <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                                  <a href="#" class="btn btn-info">Prenota
-                                    ora</a>
-                                </div>
-                              </div>
-                            </div>
-
-                <!-- <div class="card mykonos col border border-2 border-info p-5 mr-3 flex-shrink-1"
-                    style="background: url(assets/img/mykonos.jpg); background-position: center; background-size: cover;background-repeat: no-repeat; height: 250px;">
-                    <p class="h5">Mykonos</p>
-                    <button class="btn-info text-white fw-bold text-uppercase border-0 px-4 py-2" type="button">Prenota
-                        ora</button>
-                </div> -->
-                <!-- <div class="card newyork col border border-2 border-info p-5 d-flex flex-column justify-content-center mx-3 flex-shrink-1"
-                    style="background: url(assets/img/newyork.jpg); background-position: center; background-size: cover;background-repeat: no-repeat; height: 250px;">
-                    <p class="h5">New York</p>
-                    <button class="btn-info text-white fw-bold text-uppercase border-0 px-4 py-2" type="button">Prenota
-                        ora</button>
+                    </div>
+                </div>
+                <div class="col flex-shrink-1 d-sm-none d-md-flex">
+                    <div class="card border border-2 border-info">
+                        <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
+                                ora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col flex-shrink-1 d-sm-none d-lg-flex">
+                    <div class="card border border-2 border-info">
+                        <img class="card-img-top" src="assets/img/mykonos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
+                                ora</a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card madrid col d-sm-none d-md-flex border border-2 border-info p-5 flex-column justify-content-center ml-3 flex-shrink-1"
-                    style="background: url(assets/img/madrid.jpg); background-position: center; background-size: cover;background-repeat: no-repeat; height: 250px;">
-                    <p class="h5">Madrid</p>
-                    <button class="btn-info text-white fw-bold text-uppercase border-0 px-4 py-2" type="button">Prenota
-                        ora</button>
-                </div>
-                <div class="card palermo col d-sm-none d-lg-flex border border-2 border-info p-5 flex-column justify-content-center mx-3 flex-shrink-1"
-                    style="background: url(assets/img/palermo.jpg); background-position: center; background-size: cover;background-repeat: no-repeat; height: 250px;">
-                    <p class="h5">Palermo</p>
-                    <button class="btn-info text-white fw-bold text-uppercase border-0 px-4 py-2" type="button">Prenota
-                        ora</button>
-                </div> -->
             </div>
         </section>
 
@@ -187,80 +169,86 @@ In questa sezione dovranno esserci:
 2 card per destinazioni per linea a schermo medio (tablet)
 2 card per destinazioni per linea a schermo piccolo (mobile) -->
 
-<section id="welcomeSummer" class="container-fluid p-5">
-    <h2 class="h2">Welcome Summer</h2>
-    <div class="row g-2">
-        <div class="col flex-shrink-1">
-            <div class="card shadow border-0">
-                <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Mykonos</h5>
-                  <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                  <a href="#" class="btn btn-info">Prenota
-                    ora</a>
-                </div>
-              </div>
-            </div>
-    <div class="col flex-shrink-1 mx-3">
-        <div class="card shadow border-0">
-            <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Mykonos</h5>
-              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-              <a href="#" class="btn btn-info">Prenota
-                ora</a>
-            </div>
-          </div>
-        </div>
-    <div class="col flex-shrink-1 d-sm-none d-lg-flex">
-        <div class="card shadow border-0">
-            <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Mykonos</h5>
-              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-              <a href="#" class="btn btn-info">Prenota
-                ora</a>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="row d-sm-none d-xl-flex g-2 mt-2">
-        <div class="col flex-shrink-1">
-            <div class="card shadow border-0">
-                <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Mykonos</h5>
-                  <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                  <a href="#" class="btn btn-info">Prenota
-                    ora</a>
-                </div>
-              </div>
-            </div>
-            <div class="col flex-shrink-1 mx-3">
-                <div class="card shadow border-0">
-                    <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Mykonos</h5>
-                      <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                      <a href="#" class="btn btn-info">Prenota
-                        ora</a>
+        <section id="welcomeSummer" class="container-fluid p-5">
+            <h2 class="h2">Welcome Summer</h2>
+            <div class="row g-2">
+                <div class="col flex-shrink-1">
+                    <div class="card shadow border-0">
+                        <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
+                                ora</a>
+                        </div>
                     </div>
-                  </div>
+                </div>
+                <div class="col flex-shrink-1 mx-3">
+                    <div class="card shadow border-0">
+                        <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
+                                ora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col flex-shrink-1 d-sm-none d-lg-flex">
+                    <div class="card shadow border-0">
+                        <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
+                                ora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-sm-none d-xl-flex g-2 mt-2">
+                <div class="col flex-shrink-1">
+                    <div class="card shadow border-0">
+                        <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
+                                ora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col flex-shrink-1 mx-3">
+                    <div class="card shadow border-0">
+                        <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
+                                ora</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col flex-shrink-1">
                     <div class="card shadow border-0">
                         <img class="card-img-top border-0" src="assets/img/mykonos.jpg" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Mykonos</h5>
-                          <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                          <a href="#" class="btn btn-info">Prenota
-                            ora</a>
+                            <h5 class="card-title">Mykonos</h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium.</p>
+                            <a href="#" class="btn btn-info">Prenota
+                                ora</a>
                         </div>
-                      </div>
                     </div>
-</div>
+                </div>
+            </div>
 
-</section>
+        </section>
 
         <!-- 6) Implementa la sezione "Offerta del giorno". Qui avrai:
 
@@ -271,23 +259,73 @@ l'immagine avrà i bordi arrotondati e un'ombra leggera
 per il contenuto: il nome dovrà essere più grande del resto,
 le date dovranno essere formattate con font "monospace",
 il prezzo dovrà essere definito come "lead"
-e il badge sarà scuro
+e il badge sarà scuro -->
 
+        <section class="container-fluid p-5 d-sm-none d-md-block">
+            <h2 class="h2">Offerta del giorno</h2>
+            <div class="row">
+                <div class="col-8">
+                    <img src="assets/img/mykonos.jpg" class="img-fluid w-100 rounded shadow" />
+                </div>
+                <div class="col-4">
+                    <h2 class="display-2 fw-lighter">Mykonos</h2>
+                    <p class="font-monospace fw-lighter fs-5">15.01.2021-31.01.2021</p>
+                    <p class="h3 fw-lighter">Ville a partire da 500 €, non fartelo sfuggire!</p>
+                    <button class="mt-3 btn-dark rounded-pill text-white fw-bold text-uppercase border-0 px-4 py-2"
+                        type="button">Best offer</button>
+                </div>
+            </div>
+        </section>
 
-7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli.
+        <!-- 7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli.
 
 8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.
 
-9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. Rendile responsive come preferisci!
+9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. Rendile responsive come preferisci! -->
 
-10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
+        <section id="lastMinute" class="container-fluid p-5">
+            <h2 class="h2">Last minute</h2>
+            <div class="row">
+                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                    <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
+                </div>
+                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                    <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
+                </div>
+                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                    <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
+                </div>
+                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                    <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
+                </div>
+                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                    <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
+                </div>
+                <div class="col-lg-2 col-sm-6 col-md-4 mb-3">
+                    <img src="assets/img/mykonos.jpg" class="shadow img-fluid rounded" />
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
 Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra
 
-11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci".
+11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci". -->
 
+<!-- <section id="recensioni" class="container-fluid p-5">
+    <h2 class="h2 text-center">Dicono di noi</h2>
+    <div class="row">
+        <div class="col">
+            <div class=""
+        </div>
+        <div class="col"></div>
+    </div>
 
+</section> -->
 
-EXTRAS
+<!-- EXTRAS
 
 12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
 
