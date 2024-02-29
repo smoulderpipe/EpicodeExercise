@@ -1,0 +1,11 @@
+// Variabili per i font
+
+$font-family-primary: "Roboto", sans-serif;
+
+// Mixin per title-big
+
+@mixin title-big {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Layout Bootstrap></title>
+</head>
+
+<body class="font-family-inter">
+    <header class="bg-light py-1 px-3">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="assets/img/owl-icon.png" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Browse</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Landings</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">
+                            Pages
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Accounts</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <img src="assets/img/profile_blank.png" class="img-fluid rounded-circle mx-2" />
+                    <img src="assets/img/profile_blank.png" class="img-fluid rounded-circle" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="text-white">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <h1 class="h1">Welcome web students!</h1>
+                    <p>Hand-picked instructor and expertly crafted courses, designed for the modern students and
+                        entrepreneur.</p>
+                    <button type="button" class="btn btn-success p-3 text-capitalize">browse courses</button>
+                    <button type="button" class="btn btn-light p-3 text-capitalize">are you instructor?</button>
+
+                </div>
+                <div class="col-6 text-center">
+                    <img src="assets/img/job.png" class="w-75" />
+                </div>
+            </div>
+            <div class="row bg-light text-dark d-flex">
+                <div class="col text-end d-flex">
+                    <div class="icon-container rounded-circle text-center d-flex justify-content-center float-end">
+                        <i class="bi bi-camera-video"></i>
+                    </div>
+                    <div class="text-start mx-3">
+                        <p class="m-0 fw-bold">30.000 online courses</p>
+                        <p>enjoy a variety of fresh topics</p>
+                    </div>
+                </div>
+                <div class="col text-end d-flex">
+                    <div class="icon-container rounded-circle text-center d-flex justify-content-center float-end">
+                        <i class="bi bi-camera-video"></i>
+                    </div>
+                    <div class="text-start mx-3">
+                        <p class="m-0 fw-bold">30.000 online courses</p>
+                        <p>enjoy a variety of fresh topics</p>
+                    </div>
+                </div>
+                <div class="col text-end d-flex">
+                    <div class="icon-container rounded-circle text-center d-flex justify-content-center float-end">
+                        <i class="bi bi-camera-video"></i>
+                    </div>
+                    <div class="text-start mx-3">
+                        <p class="m-0 fw-bold">30.000 online courses</p>
+                        <p>enjoy a variety of fresh topics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="recommended">
+            <h2 class="h2 mb-4">Recommended to you</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="assets/img/job.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <i class="bi bi-clock"></i><span class="card-text">
+                                2h 40m </span><i class="bi bi-reception-4 mx-2"></i><span>Advance</span>
+                            <div class="star-rating my-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <div class="price">
+                                <p>$500<span class="text-decoration-line-through mx-2 text-secondary">$600</span></p>
+                            </div>
+                            <div class="row author">
+                                <div class="col text-end d-flex">
+                                    <div class="icon-container text-center d-flex justify-content-center float-end">
+                                        <img src="assets/img/job.png" class="rounded-circle" />
+                                    </div>
+                                    <div class="text-start m-0 d-flex align-items-center">
+                                        <p class="m-0 text-secondary mx-2">Brooklyn Simmons</p>
+                                        <i class="bi bi-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="assets/img/job.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <i class="bi bi-clock"></i><span class="card-text">
+                                2h 40m </span><i class="bi bi-reception-4 mx-2"></i><span>Advance</span>
+                            <div class="star-rating my-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <div class="price">
+                                <p>$500<span class="text-decoration-line-through mx-2 text-secondary">$600</span></p>
+                            </div>
+                            <div class="row author">
+                                <div class="col text-end d-flex">
+                                    <div class="icon-container text-center d-flex justify-content-center float-end">
+                                        <img src="assets/img/job.png" class="rounded-circle" />
+                                    </div>
+                                    <div class="text-start m-0 d-flex align-items-center">
+                                        <p class="m-0 text-secondary mx-2">Brooklyn Simmons</p>
+                                        <i class="bi bi-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="assets/img/job.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <i class="bi bi-clock"></i><span class="card-text">
+                                2h 40m </span><i class="bi bi-reception-4 mx-2"></i><span>Advance</span>
+                            <div class="star-rating my-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <div class="price">
+                                <p>$500<span class="text-decoration-line-through mx-2 text-secondary">$600</span></p>
+                            </div>
+                            <div class="row author">
+                                <div class="col text-end d-flex">
+                                    <div class="icon-container text-center d-flex justify-content-center float-end">
+                                        <img src="assets/img/job.png" class="rounded-circle" />
+                                    </div>
+                                    <div class="text-start m-0 d-flex align-items-center">
+                                        <p class="m-0 text-secondary mx-2">Brooklyn Simmons</p>
+                                        <i class="bi bi-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="assets/img/job.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <i class="bi bi-clock"></i><span class="card-text">
+                                2h 40m </span><i class="bi bi-reception-4 mx-2"></i><span>Advance</span>
+                            <div class="star-rating my-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <div class="price">
+                                <p>$500<span class="text-decoration-line-through mx-2 text-secondary">$600</span></p>
+                            </div>
+                            <div class="row author">
+                                <div class="col text-end d-flex">
+                                    <div class="icon-container text-center d-flex justify-content-center float-end">
+                                        <img src="assets/img/job.png" class="rounded-circle" />
+                                    </div>
+                                    <div class="text-start m-0 d-flex align-items-center">
+                                        <p class="m-0 text-secondary mx-2">Brooklyn Simmons</p>
+                                        <i class="bi bi-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

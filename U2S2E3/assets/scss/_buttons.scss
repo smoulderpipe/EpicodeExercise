@@ -1,0 +1,13 @@
+// Generazione classi per bottoni
+
+@for $i from 1 to 3 {
+    .button-#{$i} {
+      @include button-base;
+      background-color: nth($colors, $i);
+  
+      &:hover {
+        background-color: darken(nth($colors, $i), 10%);
+      }
+    }
+  }
+  

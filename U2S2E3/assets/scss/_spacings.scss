@@ -1,0 +1,19 @@
+// Funzioni per generare classi di spaziatura
+
+@function padding($type, $size) {
+    @if $type == "block" {
+      @return "padding-#{$size}";
+    } @else if $type == "inline" {
+      @return "padding-inline-#{$size}";
+    }
+  }
+  
+  @function margin($type, $size) {
+    @if $type == "block" {
+      @return "margin-#{$size}";
+    } @else if $type == "inline" {
+      @return "margin-inline-#{$size}";
+    }
+  }
+
+  
