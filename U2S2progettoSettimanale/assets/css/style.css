@@ -1,14 +1,22 @@
+
+.carousel-item-container img {
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  .carousel-item-container:hover img {
+    transform: scale(1.1); /* Increase image size on hover */
+  }
+
 #header-logo {
     width: 150px;
+    position: relative;
+    left: -12px;
 }
 
 body {
     background: black;
 }
 
-/* h1, h2, h3, h4, h5 {
-    color: white;
-} */
 
 #genres, #english {
     filter: invert(1);
@@ -21,14 +29,38 @@ body {
     .tvshows-icons {
         padding: 4px 10px;
     }
+    #cancelmembership {
+        width: 50%;
+      padding: 1em;
+    }
 }
 
 @media screen and (min-width: 576px) {
+
+    #epicoder-list {
+        max-height: 50%;
+    }
+    #cancelmembership {
+        width: 80%;
+      padding: 10%;
+    }
+
     #genres {
         padding: 13px 36px 13px 10px;
     }
     .tvshows-icons {
         padding: 10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #paypal {
+        width: 70px;
+    }
+}
+@media screen and (min-width: 992px) {
+    #paypal {
+        width: 100px;
     }
 }
 
@@ -60,6 +92,10 @@ header .dropdown-menu a:hover {
     color: black !important;
 }
 
+.dropdown-item:active {
+    background: white !important;
+}
+
 .tvshows-icons {
     max-width: 50px;
 }
@@ -71,4 +107,14 @@ header .dropdown-menu a:hover {
 
 .account-content li {
     list-style-type: none;
+    margin-bottom: 15px;
 }
+
+.intestazioni-account, .intestazioni-account-nephews {
+    color: gray;
+}
+
+.last-list li {
+    line-height: 10px;
+}
+
