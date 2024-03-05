@@ -26,6 +26,20 @@ const p3 = new Utente('Giovanna', 'Bianchi', 30, 'Napoli');
 console.log(p1.confrontaEta(p2));
 console.log(p2.confrontaEta(p3));
 
+//extra aggiunto da me:
+
+class Lavoro extends Utente {
+    constructor(_firstName, _lastName, _age, _location, _lavoro) {
+        super(_firstName, _lastName, _age, _location);
+        this.lavoro = _lavoro;
+    }
+}
+
+const p4 = new Lavoro('Giuseppe', 'Verdi', 45, 'Bologna', 'Sviluppatore');
+console.log(p4);
+
+
+
 //esercizio 2
 
 class Pet {
@@ -37,15 +51,35 @@ class Pet {
     }
 
     stessoPadrone(altroPet) {
-        return this.ownerName === altroPet.ownerName;
+        if (this.ownerName === altroPet.ownerName) {
+            console.log('Stesso proprietario');
+            return true;
+          } else {
+            console.log('Proprietario diverso');
+            return false;
+          }
     }
 }
 
+// const gatto = {
+//     anni: 4,
+//     colore: rosso
+// }
+
+
+
+const pet1 = new Pet('Bobby', 'Fausto', 'dog', 'pinscher');
+const pet2 = new Pet('Teddy', 'Fausto', 'cat', 'stray');
+pet1.stessoPadrone(pet2);
+
+// console.log(newPet.stessoPadrone(pet2));
+
 const petList = document.getElementById('petList');
 
-function addToList(e) {
-    e.preventDefault();
 
+function addToList(e) {
+    console.log(e);
+    e.preventDefault();
     const petName = document.getElementById('petName').value;
     const ownerName = document.getElementById('ownerName').value;
     const species = document.getElementById('species').value;
@@ -54,16 +88,13 @@ function addToList(e) {
     const newPet = new Pet(petName, ownerName, species, breed);
 
     const li = document.createElement('li');
-    li.innerText = `${petName} (proprietario: ${ownerName}): ${species} ${breed ? `(${breed})`: ''}`;
+    li.innerText = `${petName} (proprietario: ${ownerName}): ${species} ${breed ? `(${breed})` : ''}`;
     petList.appendChild(li);
 
     document.getElementById('petName').value = '';
     document.getElementById('ownerName').value = '';
     document.getElementById('species').value = '';
     document.getElementById('breed').value = '';
-
-    return false;
 }
 
 document.getElementById("addToListBtn").addEventListener("click", addToList);
-
