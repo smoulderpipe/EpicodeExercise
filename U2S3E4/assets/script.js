@@ -75,6 +75,7 @@ const functionSecondaryImages = async () => {
 
 loadImages.addEventListener("click", functionLoadImages);
 secondaryImages.addEventListener("click", functionSecondaryImages);
+buttonHide.addEventListener("click", hideCard);
 
 function creaCard(photoData) {
     const col = document.createElement("div");
@@ -84,11 +85,28 @@ function creaCard(photoData) {
     card.classList.add("card", "mb-4", "shadow-sm");
     col.appendChild(card);
     const img = document.createElement("img");
-    img.classList.add("card-img-top");
+    img.classList.add("card-img-top", "bd-placeholder-img");
     card.appendChild(img);
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
     card.appendChild(cardBody);
+    const buttonContainer = document.createElement("div");
+    buttonContainer.classList.add("d-flex", "justify-content-between", "align-items-center");
+    cardBody.appendChild(buttonContainer);
+    const btnGroup = document.createElement("div");
+    btnGroup.classList.add("btn-group");
+    buttonContainer.appendChild(btnGroup);
+    const buttonView = document.createElement("button");
+    buttonView.classList.add("btn", "btn-sm", "btn-outline-secondary");
+    btnGroup.appendChild(buttonView);
+    buttonView.innerText = "View";
+    const buttonHide = document.createElement("button");
+    buttonHide.classList.add("btn", "btn-sm", "btn-outline-secondary");
+    btnGroup.appendChild(buttonHide);
+    buttonHide.innerText = "Hide";
+    const small = document.createElement("small");
+    small.classList.add("text-muted");
+    btnGroup.appendChild(small);
     const cardUl = document.createElement("ul");
     cardUl.classList.add("list-group", "list-group-flush");
     card.appendChild(cardUl);
@@ -97,4 +115,12 @@ function creaCard(photoData) {
     card.appendChild(cardBody2);
 
     img.src = photoData.src.landscape;
+    small.innerText = photoData.id;
+
+    buttonHide.addEventListener("click", () => {
+        const col = buttonHide.closest(".col-md-4");
+        col.style.display = "none";
+    });
+
 }
+
