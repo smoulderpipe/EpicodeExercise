@@ -66,22 +66,18 @@ function creaCard(productData) {
     buttonEdit.classList.add("btn", "btn-sm", "btn-outline-secondary");
     btnGroup.appendChild(buttonEdit);
     buttonEdit.innerText = "Modifica";
-    const aDiscover = document.createElement("a");
-    aDiscover.href = `dettaglio-prodotto.html?id=${productData._id}`;
-    btnGroup.appendChild(aDiscover);
     const buttonDiscover = document.createElement("button");
     buttonDiscover.classList.add("btn", "btn-sm", "btn-outline-secondary");
-    aDiscover.appendChild(buttonDiscover);
+    btnGroup.appendChild(buttonDiscover);
     buttonDiscover.innerText = "Scopri di più";
-    const small = document.createElement("small");
-    small.classList.add("text-muted");
-    btnGroup.appendChild(small);
-    const cardUl = document.createElement("ul");
-    cardUl.classList.add("list-group", "list-group-flush");
-    card.appendChild(cardUl);
-    const cardBody2 = document.createElement("div");
-    cardBody2.classList.add("card-body");
-    card.appendChild(cardBody2);
+
+    buttonDiscover.addEventListener("click", () => {
+        window.location.href = `dettaglio-prodotto.html?id=${productData._id}`;
+      });
+
+    buttonEdit.addEventListener("click", () => {
+        window.location.href = `back-office.html?id=${productData._id}`; // Set href on click
+      });
 
     // buttonDelete.addEventListener("click", async () => {
     //     const productId = productData._id;

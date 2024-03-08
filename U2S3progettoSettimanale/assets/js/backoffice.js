@@ -22,7 +22,36 @@ const nomeProdottoElement = document.getElementById("nome-prodotto");
 const brandElement = document.getElementById("brand");
 const prezzoElement = document.getElementById("prezzo");
 const urlImmagineElement = document.getElementById("url-immagine");
-const descrizioneProdotto = document.getElementById("descrizione")
+const descrizioneProdotto = document.getElementById("descrizione");
+
+const searchParams = new URLSearchParams(window.location.search);
+const idProdotto = searchParams.get("id");
+
+const deleteButtonElement = document.getElementById("delete-button");
+
+window.addEventListener("load", () => {
+  if (idProdotto) {
+    fetch(`${url}/${idProdotto}`, {
+      headers: {
+        "Authorization": token,
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          deleteButtonElement.style.display = "inline";
+        } else {
+          console.log("ID non valido o problemi di rete");
+        }
+      })
+      .catch((error) => {
+        console.error("Errore nel download dei dati:", error);
+      });
+  } else {
+    deleteButtonElement.style.display = "none";
+  }
+});
 
 const saveButtonElement = document.getElementById("save-button");
 const resetButtonElement = document.getElementById("reset-button");
@@ -85,33 +114,27 @@ saveButtonElement.addEventListener("click", (event) => {
 
 });
 
-// const payload = {
-//     "name": "Nommex",
-//     "brand": "Nokia",
-//     "imageUrl": "https://example.com/3310.jpg",
-//     "price": 99,
-//     "description": "Descrizione del prodotto"
-// };
-
-// const options = {
-//     method: "POST",
-//     headers: {
-//         "Authorization": token,
-//         "Accept": "application/json",
-//         "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(payload),
-// };
 
 
-// fetch(url, options)
-//     .then((response) => {
-//         if (response.ok) {
-//             console.log("Prodotto creato correttamente!");
-//         } else {
-//             console.error("Errore durante la creazione del prodotto:", response.statusText);
-//         }
-//     })
-//     .catch((error) => {
-//         console.error("Errore di rete:", error);
-//     });
+// buttonDelete.addEventListener("click", async () => {
+    //     const productId = productData._id;
+      
+    //     const deleteOptions = {
+    //       method: "DELETE",
+    //       headers: {
+    //         Authorization: token,
+    //         "Content-Type": "application/json",
+    //       },
+    //     };
+      
+    //     const deleteResponse = await fetch(`${url}/${productId}`, deleteOptions);
+      
+    //     if (deleteResponse.ok) {
+    //       console.log("Prodotto correttamente cancellato!");
+    //       const col = buttonDelete.closest(".col-md-4");
+    //       col.style.display = "none";
+    //     } else {
+    //       console.error("Errore durante la cancellazione dell'oggetto:", deleteResponse.statusText);
+    //     }
+    //   });
+

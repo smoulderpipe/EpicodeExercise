@@ -26,7 +26,7 @@
 
 
 const url = "https://striveschool-api.herokuapp.com/api/product";
-const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZDkyMTJkN2IxMTAwMTkwZTZkZTIiLCJpYXQiOjE3MDk4ODk4MjYsImV4cCI6MTcxMTA5OTQyNn0.CSA2L2B8_nNw4z5U5chGJk6Uti363dDzjVH2gAu3yu0"; // 
+const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZDkyMTJkN2IxMTAwMTkwZTZkZTIiLCJpYXQiOjE3MDk4ODk4MjYsImV4cCI6MTcxMTA5OTQyNn0.CSA2L2B8_nNw4z5U5chGJk6Uti363dDzjVH2gAu3yu0";
 
 const options = {
     method: "GET",
@@ -36,18 +36,22 @@ const options = {
     },
 };
 
-const caricaProdotti = async () => {
-    const response = await fetch(url, options);
-    const data = await response.json();
-    for (let i = 0; i < data.length; i++) {
-        console.log(data[i]);
-        creaDettaglio(data[i]);
+window.addEventListener("load", async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("id");
+    
+    if (productId) {
+      const response = await fetch(`${url}/${productId}`, options);
+      const productData = await response.json();
+      if (response.ok) {
+        creaDettaglio(productData);
+      } else {
+        console.error("Errore nel download dei dettagli:", response.statusText);
+      }
+    } else {
+      console.error("ID mancante nell'url");
     }
-};
-
-window.addEventListener("load", (event) => {
-    caricaProdotti();
-});
+  });
 
 const row = document.getElementById("details-row");
 
