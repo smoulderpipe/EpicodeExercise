@@ -54,6 +54,7 @@ let loadImages = document.getElementById("load-images");
 let secondaryImages = document.getElementById("secondary-images");
 
 const functionLoadImages = async () => {
+    row.innerHTML = "";
     const url = `https://api.pexels.com/v1/search?query=clouds`;
     const response = await fetch(url, options);
     const data = await response.json();
