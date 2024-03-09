@@ -76,7 +76,7 @@ function creaCard(productData) {
       });
 
     buttonEdit.addEventListener("click", () => {
-        window.location.href = `back-office.html?id=${productData._id}`; // Set href on click
+        window.location.href = `back-office.html?id=${productData._id}`;
       });
 
     // buttonDelete.addEventListener("click", async () => {

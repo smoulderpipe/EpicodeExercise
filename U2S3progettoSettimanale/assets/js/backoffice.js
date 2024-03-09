@@ -31,6 +31,8 @@ const deleteButtonElement = document.getElementById("delete-button");
 
 window.addEventListener("load", () => {
   if (idProdotto) {
+    const h1DOM = document.querySelector("h1");
+    h1DOM.innerText = "Modifica il prodotto";
     fetch(`${url}/${idProdotto}`, {
       headers: {
         "Authorization": token,
@@ -40,10 +42,19 @@ window.addEventListener("load", () => {
     })
       .then((response) => {
         if (response.ok) {
-          deleteButtonElement.style.display = "inline";
+          return response.json();
         } else {
           console.log("ID non valido o problemi di rete");
+          throw new Error("ID non valido o problemi di rete");
         }
+      })
+      .then((productData) => {
+        deleteButtonElement.style.display = "inline";
+        nomeProdottoElement.value = productData.name;
+        brandElement.value = productData.brand;
+        prezzoElement.value = productData.price;
+        urlImmagineElement.value = productData.imageUrl;
+        descrizioneProdotto.value = productData.description;
       })
       .catch((error) => {
         console.error("Errore nel download dei dati:", error);
@@ -77,64 +88,86 @@ saveButtonElement.addEventListener("click", (event) => {
   const prezzo = prezzoElement.value;
   const urlImmagine = urlImmagineElement.value;
   const descrizione = descrizioneProdotto.value;
-  
+
   const payload = {
-    "name": nomeProdotto,
-    "brand": brand,
-    "imageUrl": urlImmagine,
-    "price": prezzo,
-    "description": descrizione
+    name: nomeProdotto,
+    brand: brand,
+    imageUrl: urlImmagine,
+    price: prezzo,
+    description: descrizione
   };
 
+  let requestUrl = url;
+  let requestMethod = "POST";
+
+  if (idProdotto) {
+    requestUrl = `${url}/${idProdotto}`;
+    requestMethod = "PUT";
+  }
+
   const options = {
-    method: "POST",
+    method: requestMethod,
     headers: {
-        "Authorization": token,
-        "Accept": "application/json",
-        "Content-Type": "application/json",
+      "Authorization": token,
+      "Accept": "application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(payload),
   };
 
-  fetch(url, options)
+  fetch(requestUrl, options)
     .then((response) => {
       if (response.ok) {
-        console.log("Prodotto creato correttamente!");
-        alert("Prodotto creato correttamente!");
-        svuotaForm();
+        if (idProdotto) {
+          console.log("Prodotto aggiornato correttamente!");
+          alert("Prodotto aggiornato correttamente!");
+        } else {
+          console.log("Prodotto creato correttamente!");
+          alert("Prodotto creato correttamente!");
+          svuotaForm();
+        }
       } else {
-        console.error("Errore durante la creazione del prodotto:", response.statusText);
-        alert("Tutti i campi sono obbligatori, compila il form per intero.");
+        console.error("Errore durante l'operazione:", response.statusText);
+        alert("Errore durante l'operazione:", response.statusText);
       }
     })
     .catch((error) => {
       console.error("Errore di rete:", error);
       alert("Errore di rete:", error);
     });
-
 });
 
+deleteButtonElement.addEventListener("click", () => {
+  if (idProdotto) {
+    if (confirm("Sei sicuro di voler eliminare questo prodotto?")) {
+      const deleteUrl = `${url}/${idProdotto}`;
+      const options = {
+        method: "DELETE",
+        headers: {
+          "Authorization": token,
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+      };
 
-
-// buttonDelete.addEventListener("click", async () => {
-    //     const productId = productData._id;
-      
-    //     const deleteOptions = {
-    //       method: "DELETE",
-    //       headers: {
-    //         Authorization: token,
-    //         "Content-Type": "application/json",
-    //       },
-    //     };
-      
-    //     const deleteResponse = await fetch(`${url}/${productId}`, deleteOptions);
-      
-    //     if (deleteResponse.ok) {
-    //       console.log("Prodotto correttamente cancellato!");
-    //       const col = buttonDelete.closest(".col-md-4");
-    //       col.style.display = "none";
-    //     } else {
-    //       console.error("Errore durante la cancellazione dell'oggetto:", deleteResponse.statusText);
-    //     }
-    //   });
+      fetch(deleteUrl, options)
+        .then((response) => {
+          if (response.ok) {
+            console.log("Prodotto eliminato con successo!");
+            alert("Prodotto eliminato con successo!");
+            window.location.href = "index.html"
+          } else {
+            console.error("Errore durante l'eliminazione del prodotto:", response.statusText);
+            alert("Errore durante l'eliminazione del prodotto:", response.statusText);
+          }
+        })
+        .catch((error) => {
+          console.error("Errore di rete:", error);
+          alert("Errore di rete:", error);
+        });
+    }
+  } else {
+    console.log("ID del prodotto non disponibile per l'eliminazione.");
+  }
+});
 
