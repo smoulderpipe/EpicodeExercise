@@ -1,0 +1,165 @@
+body {
+    background: black;
+}
+
+.sfoglia-boxes {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+#sfoglia-tutto {
+    margin-bottom: 100px;
+}
+
+#right-section {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#side-playlist-list {
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+#header-right-section {
+    z-index: 100;
+}
+
+#img-playlist-hero {
+    height: 230px;
+    min-width: 230px;
+    max-width: 230px;
+}
+
+
+.img-playlist-sub-hero {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    
+}
+
+.img-playlist-medium, #search-history img, .colored-boxes {
+    width: 120px;
+    height: 120px;
+}
+
+.colored-boxes {
+    background: #8f6f29;
+}
+
+.img-side-single-playlist {
+    width: 70px;
+    height: 70px;
+}
+
+.img-preview-player {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-librerie a {
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 1255px) {
+    .nav-librerie > li:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .nav-librerie > li:nth-child(3) {
+        display: none;
+    }
+}
+
+.left-section {
+    min-width: 280px;
+}
+
+.lighterbg {
+    background: #303030;
+}
+
+.single-track-search-page img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#right-section #header-right-section form {
+    position: relative;
+    right: -14px;
+}
+
+#searchQuery {
+    padding: 4px;
+}
+
+#player-section {
+    background: #181818;
+}
+
+.row-single-tracks img {
+    width: 50px;
+    height: 50px;
+}
+
+#artistHero {
+    background-image: url("");
+    background-size: cover;
+    background-repeat: repeat;
+    min-height: 300px;
+}
+
+.greytext {
+    color: grey !important;
+}
+
+input::placeholder {
+    opacity: 0.3 !important;
+}
+
+input:focus {
+    outline: none;
+  }
+
+.bg-info-artist {
+    background-image: url("");
+    background-size: cover;
+    background-repeat: repeat;
+    min-height: 300px;
+}
+
+
+.skeleton {
+    background: #7a7a7a;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skeleton::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -150%;
+    top: 0;
+    height: 100%;
+    width: 150%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: load 1.5s infinite;
+  }
+  
+  @keyframes load {
+    0% {
+      left: -150%;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
