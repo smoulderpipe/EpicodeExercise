@@ -1,0 +1,56 @@
+[
+    {
+        "brand": "Fiat",
+        "brandLogo": "https://upload.wikimedia.org/wikipedia/it/thumb/9/9e/Logo_della_Fiat.svg/2048px-Logo_della_Fiat.svg.png",
+        "model": "500L",
+        "modelImage": "https://hd2.tudocdn.net/717618?w=520&h=365",
+        "year": 2015,
+        "price": 7500,
+        "available": false
+    },
+    {
+        "brand": "Fiat",
+        "brandLogo": "https://upload.wikimedia.org/wikipedia/it/thumb/9/9e/Logo_della_Fiat.svg/2048px-Logo_della_Fiat.svg.png",
+        "model": "500 Abarth",
+        "modelImage": "https://cdn-img.automoto.it/images/1236972/3000x/4-00029523.jpeg",
+        "year": 2010,
+        "price": 3500,
+        "available": true
+    },
+    {
+        "brand": "Ford",
+        "brandLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/800px-Ford_logo_flat.svg.png",
+        "model": "Taurus",
+        "modelImage": "https://www.autoscout24.it/cms-content-assets/y6qAlpEqI7OVI6WkbFMZq-d21f45bc6a1f739a97443ee660f68446-ford-taurus-front-1100.jpeg",
+        "year": 2009,
+        "price": 5200,
+        "available": false
+    },
+    {
+        "brand": "Ford",
+        "brandLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/800px-Ford_logo_flat.svg.png",
+        "model": "Focus",
+        "modelImage": "https://www.gpas-cache.ford.com/guid/3c3e2039-651c-396c-9d4a-9341fa79386b.png",
+        "year": 2014,
+        "price": 9700,
+        "available": true
+    },
+    {
+        "brand": "Audi",
+        "brandLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Audi_logo_detail.svg/800px-Audi_logo_detail.svg.png",
+        "model": "A3",
+        "modelImage": "https://www.noleggiosemplice.it/static/images/vehicles/vehicle_first_img/1667947248964_A3-Sportback.webp",
+        "year": 2012,
+        "price": 4300,
+        "available": true
+    },
+    {
+        "brand": "Audi",
+        "brandLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Audi_logo_detail.svg/800px-Audi_logo_detail.svg.png",
+        "model": "Q7",
+        "modelImage": "https://media.ed.edmunds-media.com/audi/q7/2022/oem/2022_audi_q7_4dr-suv_prestige_fq_oem_1_600.jpg",
+        "year": 2020,
+        "price": 41700,
+        "available": false
+    }
+]

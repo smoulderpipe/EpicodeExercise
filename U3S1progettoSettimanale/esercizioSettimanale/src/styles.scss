@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+#container-cards-single-brand {
+    margin-bottom: 100px;
+
+}
+
+#main-content-home {
+    margin-bottom: 100px;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer ul {
+    padding: 0 !important;
+}
+
+#main-content-home .card {
+    width: 30rem;
+}
+
+#main-content-home .card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+body {
+    position: relative !important;
+}
+
+#main-navbar {
+    z-index: 1000;
+}

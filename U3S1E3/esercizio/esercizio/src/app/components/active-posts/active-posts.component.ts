@@ -16,7 +16,7 @@ export class ActivePostsComponent {
   }
 
   async getPosts() {
-    let response = await fetch('assets/db.json');
+    let response = await fetch('../../assets/db.json');
     let data = await response.json();
     return data;
 }

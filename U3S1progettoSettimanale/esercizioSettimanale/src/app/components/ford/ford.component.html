@@ -1,0 +1,25 @@
+<div class="container mt-5 w-75" id="container-cards-single-brand">
+    <div class="row">
+        <div class="col d-flex align-items-center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/800px-Ford_logo_flat.svg.png" width="200"/></div>
+        <div class="col d-flex align-items-center bg-light p-5">
+            <p class="h3">Le nostre auto Ford</p>
+        </div>
+    </div>
+
+    <div class="row d-flex flex-column mt-5">
+        <div class="container-card">
+            <div *ngFor="let car of cars">
+                    <div class="card mb-3">
+                        <img src="{{ car.modelImage }}" class="card-img-top" alt="...">
+                        <div class="card-body" [ngClass]="{'bg-success': car.available, 'bg-danger': !car.available}">
+                            <h3 class="card-title text-white fst-italic">{{ car.brand }} {{ car.model }}</h3>
+                          <span class="btn bg-transparent border border-1 border-white text-white me-2 rounded-pill">Anno: {{ car.year }}</span>
+                          <span class="btn bg-transparent border border-1 border-white text-white me-2 rounded-pill">Prezzo: {{ car.price }}</span>
+                          <span class="btn bg-transparent border border-1 border-white text-white rounded-pill">Pronta consegna: {{ car.available ? 'Sì' : 'No' }}</span>
+                        </div>
+                      </div>
+
+            </div>
+        </div>
+    </div>
+</div>

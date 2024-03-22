@@ -1,0 +1,36 @@
+<div class="bg-light text-center p-5">
+    <img src="../../../assets/logo.png" class="img-fluid" />
+    <p class="h1">Il tuo salone di fiducia</p>
+</div>
+<div id="main-content-home">
+    <div>
+        <p class="text-center h3 mt-5">I nostri marchi </p>
+        <div class="d-flex align-items-center justify-content-around">
+            <span *ngFor="let brandLogo of brandLogos">
+                <img src="{{ brandLogo.brandLogo }}" class="img-fluid" width="100"/>
+            </span>
+        </div>
+        <div class="text-center border-top border-1 border-secondary mt-5 pt-5">
+            <p class="h3 mb-5">Auto in evidenza</p>
+            <div class="d-flex justify-content-around">
+                <div *ngFor="let car of cars">
+                    <div class="card mb-3">
+                        <img src="{{ car.modelImage }}" class="card-img-top" alt="...">
+                        <div class="card-body" [ngClass]="{'bg-success': car.available, 'bg-danger': !car.available}">
+                            <h3 class="card-title text-white fst-italic">{{ car.brand }} {{ car.model }}</h3>
+                            <div class="mt-3">
+                                <span class="btn bg-transparent border border-1 border-white text-white me-2 rounded-pill">Anno: {{ car.year }}</span>
+                                <span class="btn bg-transparent border border-1 border-white text-white me-2 rounded-pill">Prezzo: {{ car.price }} &#8364;</span>
+                                <span class="btn bg-transparent border border-1 border-white text-white rounded-pill">Pronta consegna: {{ car.available ? 'Sì' : 'No' }}</span>
+                            </div>
+                            <div>
+                                <a routerLink="/{{ car.brand }}" class="btn bg-white mt-3 rounded-pill px-4 mb-3"><span class="h3">tutte le nostre {{ car.brand }}</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

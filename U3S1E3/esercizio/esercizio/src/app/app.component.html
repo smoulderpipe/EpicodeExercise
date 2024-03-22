@@ -6,13 +6,15 @@
     <div class="row">
       <div class="col-8">
         <div id="in-evidenza" class="bg-light p-4">
-          <h1 class="fw-bold">In evidenza:
-            <app-active-posts></app-active-posts>
-          </h1>
+
+          <h1 class="fw-bold">In evidenza:<span *ngFor="let post of posts; let i = index">
+              <span *ngIf="post.id === 22"> {{ post.title }}</span>
+            </span></h1>
           <a href="#">Leggi di più...</a>
+
         </div>
         <div id="anteprime">
-          
+
         </div>
       </div>
       <div class="col-4">
