@@ -1,20 +1,20 @@
 <div class="container mt-5 w-75" id="container-cards-single-brand">
     <div class="row">
-        <div class="col d-flex align-items-center"><img src="https://upload.wikimedia.org/wikipedia/it/thumb/9/9e/Logo_della_Fiat.svg/2048px-Logo_della_Fiat.svg.png" width="200"/></div>
+        <div class="col-4 d-flex align-items-center"><img src="https://upload.wikimedia.org/wikipedia/it/thumb/9/9e/Logo_della_Fiat.svg/2048px-Logo_della_Fiat.svg.png" width="200"/></div>
         <div class="col bg-light p-5 d-flex align-items-center">
-            <p class="h3">Le nostre auto Fiat</p>
+            <h1>Le nostre auto Fiat</h1>
         </div>
     </div>
 
     <div class="row d-flex flex-column mt-5">
         <div class="container-card">
             <div *ngFor="let car of cars">
-                    <div class="card mb-3">
+                    <div class="card mb-5">
                         <img src="{{ car.modelImage }}" class="card-img-top" alt="...">
                         <div class="card-body" [ngClass]="{'bg-success': car.available, 'bg-danger': !car.available}">
                             <h3 class="card-title text-white fst-italic">{{ car.brand }} {{ car.model }}</h3>
                           <span class="btn bg-transparent border border-1 border-white text-white me-2 rounded-pill">Anno: {{ car.year }}</span>
-                          <span class="btn bg-transparent border border-1 border-white text-white me-2 rounded-pill">Prezzo: {{ car.price }}</span>
+                          <span class="btn bg-transparent border border-1 border-white text-white me-2 rounded-pill">Prezzo: {{ car.price }} &#8364;</span>
                           <span class="btn bg-transparent border border-1 border-white text-white rounded-pill">Pronta consegna: {{ car.available ? 'Sì' : 'No' }}</span>
                         </div>
                       </div>

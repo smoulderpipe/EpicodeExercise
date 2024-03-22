@@ -1,6 +1,6 @@
-<div class="bg-light text-center p-5">
-    <img src="../../../assets/logo.png" class="img-fluid" />
-    <p class="h1">Il tuo salone di fiducia</p>
+<div class="bg-light text-center p-5" id="hero">
+    <img src="../../../assets/logo3.png" class="img-fluid border border-1 border-black" />
+    <h1>Il tuo salone di fiducia</h1>
 </div>
 <div id="main-content-home">
     <div>
@@ -24,7 +24,7 @@
                                 <span class="btn bg-transparent border border-1 border-white text-white rounded-pill">Pronta consegna: {{ car.available ? 'Sì' : 'No' }}</span>
                             </div>
                             <div>
-                                <a routerLink="/{{ car.brand }}" class="btn bg-white mt-3 rounded-pill px-4 mb-3"><span class="h3">tutte le nostre {{ car.brand }}</span></a>
+                                <a routerLink="/{{ car.brand }}" class="btn bg-white mt-3 rounded-pill px-4 mb-3 interactive-button"><span class="h3">tutte le nostre {{ car.brand }}</span></a>
                             </div>
                         </div>
                     </div>

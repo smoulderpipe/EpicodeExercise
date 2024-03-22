@@ -3,7 +3,7 @@
         "brand": "Fiat",
         "brandLogo": "https://upload.wikimedia.org/wikipedia/it/thumb/9/9e/Logo_della_Fiat.svg/2048px-Logo_della_Fiat.svg.png",
         "model": "500L",
-        "modelImage": "https://hd2.tudocdn.net/717618?w=520&h=365",
+        "modelImage": "https://www.autoscout24.it/cms-content-assets/7wS2Bno4suJoxjJXwSjUkd-f144161393e08fccbe811bb9ae736afb-fiat-500l-front-1100.webp",
         "year": 2015,
         "price": 7500,
         "available": false
@@ -12,7 +12,7 @@
         "brand": "Fiat",
         "brandLogo": "https://upload.wikimedia.org/wikipedia/it/thumb/9/9e/Logo_della_Fiat.svg/2048px-Logo_della_Fiat.svg.png",
         "model": "500 Abarth",
-        "modelImage": "https://cdn-img.automoto.it/images/1236972/3000x/4-00029523.jpeg",
+        "modelImage": "https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2008/07/08/att_371346_0?_=1340162641&format=webp",
         "year": 2010,
         "price": 3500,
         "available": true
@@ -39,7 +39,7 @@
         "brand": "Audi",
         "brandLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Audi_logo_detail.svg/800px-Audi_logo_detail.svg.png",
         "model": "A3",
-        "modelImage": "https://www.noleggiosemplice.it/static/images/vehicles/vehicle_first_img/1667947248964_A3-Sportback.webp",
+        "modelImage": "https://cdn.drivek.com/configurator-imgs/cars/it/Original/AUDI/A3-SPORTBACK/39259_HATCHBACK-5-DOORS/audi-a3-sportback-2020-front-side.jpg",
         "year": 2012,
         "price": 4300,
         "available": true
@@ -48,7 +48,7 @@
         "brand": "Audi",
         "brandLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Audi_logo_detail.svg/800px-Audi_logo_detail.svg.png",
         "model": "Q7",
-        "modelImage": "https://media.ed.edmunds-media.com/audi/q7/2022/oem/2022_audi_q7_4dr-suv_prestige_fq_oem_1_600.jpg",
+        "modelImage": "https://red-live.imgix.net/wp-content/uploads/2024/01/nuova-audi-q7-sq7-2024_A240637.jpeg?auto=format%2Ccompress&w=1024&h=1024",
         "year": 2020,
         "price": 41700,
         "available": false
