@@ -58,7 +58,7 @@ L'applicazione è sviluppata in Angular ed è suddivisa nei seguenti componenti 
     Avviare l'applicazione: ng serve
 
 ### Sviluppatore:
-[Il tuo nome o pseudonimo]
+Paola Del Vecchio @smoulderpipe
 
 ------
 
