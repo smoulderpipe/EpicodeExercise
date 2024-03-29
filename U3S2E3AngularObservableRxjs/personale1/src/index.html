@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Personale1</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+
+<!--
+-----------------------------OBSERVABLES-----------------------
+  
+COSA SONO
+Sono un tipo di dato asincrono che ci viene messo a disposizione da RxJS, una libreria di javascript usata da Angular e altri framework per gestire azioni asincrone.
+Possiamo immaginarli come un wrapper intorno a un flusso ordinario di dati, che permette di streammare i dati dentro un flusso osservabile di dati.
+
+COME FUNZIONANO
+- Un "observable" è un flusso che contiene dati sincroni e asincroni, e deriva da una sorgente (risultato chiamata API, oppure evento generato nel DOM)
+- Il suo "observer" controlla se ci sono cambiamenti nei valori dell'observable e li riceve. Sono oggetti con 3 callback: "next", "error" e "complete", e ricevono notifiche dall'observable.
+- Una "subscription" è l'azione di iscrizione che l'observer effettua sull'observable. Dopo quest'azione possiamo controllare i cambiamenti.
+
+TIPI DI OBSERVABLES
+- Observables "puri"
+Possono essere osservati da un solo observer.
+Devono essere sottoscritti all'inizio e cancellati alla fine.
+- Observables di tipo "subject"
+Possono essere osservati da più di un observer ("multicasting")
+
+DIFFERENZA TRA OBSERVABLES E PROMISES
+[promise]
+- gestisce un singolo valore quando un'operazione asincrona viene eseguita con o senza successo;
+- inizia immediatamente;
+- non può essere cancellata una volta avviata;
+- non sono adatte a gestire flussi di dati continui;
+- restituisce i dati anche se non vengono usati
+[observable]
+- consente di ascoltare i cambiamenti di uno o più valori;
+- è lazy (non inizia immediatamente, bensì quando ci si iscrive all'observable);
+- può essere cancellato in qualsiasi momento;
+- è adatto a gestire flussi di dati continui;
+- restuisce solo i dati che vengono usati
+
+ESEMPIO PRATICO DI UTILIZZO
+1) Importiamo dentro app.components.ts l'Observable
+2) Creiamo un nuovo Observable dentro la classe di app.component.ts creando una nuova variabile "myOservable = new Observable()"
+3) Il constructor Observable() si aspetta di ricevere una callback come parametro, che riceverà a sua volta un parametro "observer" che verrà iniettato dalla RxJS library. Quell'observer è il subscriber che si aspetta di ricevere i dati streammati dall'observer.
+4) Se vogliamo streammare dei dati verso l'observer, possiamo fare un "observer.next("1"); observer.next(2)..." dentro la funzione di callback dell'Observer, e legarli a un setTimeout (che accetta 2 parametri: una callback e un intervallo di tempo espresso in millisecondi)
+5) È tutto pronto, manca solo il subscriber che riceve i dati (senza subscriber, i dati non vengono emessi dall'Observer). Implementiamo quindi un OnInit e creiamo un nuovo NgOnInit() che esegua un "this.myObservable.subscribe"
+6) Il metodo "subscribe" accetta 3 parametri opzionali di tipo callback: "next", "error" e "complete".
+  - "next" è una funzione che viene eseguita ogni volta che il metodo "next" ritorna un valore, quindi nel nostro esempio (codice commentato righe 22-26) riceverà il valore "val" 5 volte e lo stamperà in console 5 volte.
+  - "error" è una funzione che viene eseguita quando c'è un errore nell'Observable e interrompe lo streaming. In questo modo verrà visualizzato un errore generico in console log, per renderlo personalizzato (cioè usare il codice scritto dentro il codice commentato a riga 17) dobbiamo aggiungere una seconda callback "error" dentro ngOnInit(), che ci permetterà di usare quell'errore per fare qualcosa (es. far partire un alert) e l'errore scomparirà dalla console.
+  - "complete" è opzionale e si usa se si vuole streammare una notifica di completamento dopo che l'esecuzione dello stream è terminata, ma non è chiamato per ultimo, interrompe lo streaming di ciò che lo segue. Per emettere una notifica di completamento bisogna usare il metodo "complete" (che non accetta parametri) es. su un altro setTimout legato all'observer. La logica legata al termine dell'esecuzione dello stream deve essere scritta dentro la terza callback (senza argomenti) dell'ngOnInit().
+
+COME CREARLI
+1) Tramite "myOservable = new Observable()"
+2) Tramite "myObservable = Observable.create((observer) => {})"
+3) Tramite l'assegnazione di un array, es:
+      "array1 = [1, 2, 4, 7];
+      array2 = ["A", "B", "C"];
+      myObservable = of(this.array1, this.array2);"
+    oppure con il "from" al posto dell' "of"
+    Nel caso di "from" e "of", il subscriber riceverà in automatico il parametro "complete".
+
+
+-------------------OPERATORI-------------------------------
+
+COSA SONO
+Sono funzioni pure che ricevono un observable come input, lo manipolano e ne creano uno nuovo in output. Alcuni hanno nomi simili ai metodi degli Array, ma funzionano diversamente. Esempi:
+- map()
+- forEach()
+- reduce()
+- flatMap()
+- ...
+
+OPERATORI DI GESTIONE DEGLI ERRORI
+catchError()
+throwError() <- è un generatore, non un operatore
+
+ESEMPIO DI UTILIZZO (MAP)
+Vogliamo prendere i valori di array1 e moltiplicare ciascuno di essi * 5 e ottenere i valori ottenuti da questa trasformazione.
+  1) Creiamo un nuovo myObservable2 a partire da un array
+  2) Usiamo il metodo "pipe()" sul myObservable2. "pipe" serve a passare l'operatore all'observable, in questo caso il metodo "map()" (dobbiamo importarli entrambi dalla RxJS per farli funzionare)
+  3) Inseriamo il parametro "val" al metodo "map()" per fare in modo che la funzione effettui un'operazione per ciascun valore dell'array, dal primo all'ultimo, uno alla volta.
+  4) L'operazione che deve fare è la moltiplicazione, pertanto scriviamo "(val => { return val * 5;})" come parametro del "map()"
+  5) Vogliamo visualizzare nella console i risultati di questa operazione, pertanto creiamo una nuova variabile "transformObs" che rappresenti il risultato dell'operazione, e la facciamo stampare dall'ngOnInit.
+
+ESEMPIO DI UTILIZZO (FILTER)
+Vogliamo prendere i valori generati da "transformObs" e ritornare solo quelli >= 30.
+  1) creiamo una nuova variabile "filterObs" e le assegnamo il valore che dev'essere generato dal filtro (un array di numeri >= 30).
+  2) l'uso del pipe e la sintassi del metodo "filter" sono analoghi a quando visto nell'esempio del map
+  3) Facciamo stampare all'ngOnInit i valori filtrati da "filterObs"
+- Avremmo potuto fare la stessa cosa usando il metodo "filter" come secondo parametro di "transformObs", combinandoli otteniamo il risultato del filtro e usando un solo pipe
+- Avremmo potuto anche solo assegnare in maniera combinata i metodi "from" e "pipe(map(val),filter(val)" su myObservable e stampare solo quella, senza generare nuove variabili.
+
+------------------------HTTPCLIENT-------------------------
+
+
+
+
+
+-->

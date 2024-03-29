@@ -1,0 +1,15 @@
+<h2 class="mt-3">Lista TODO</h2>
+<ul *ngIf="todos.length > 0" class="ms-0 ps-0 mt-3">
+
+  <li *ngFor="let todo of todos" [ngClass]="{'completed': todo.completed, 'notcompleted' : !todo.completed}"
+    class="d-flex ms-0">
+    <input type="checkbox" (click)="toggleCompleted(todo)" [checked]="todo.completed">
+    <div>
+      <h3>{{ todo.todo }}</h3>
+      <p *ngIf="todo.userId && users[todo.userId]">
+        Assigned to: {{ users[todo.userId - 1].firstName }} {{ users[todo.userId - 1].lastName }}
+      </p>
+    </div>
+  </li>
+</ul>
+<p *ngIf="todos.length === 0">Nessun TODO da visualizzare</p>

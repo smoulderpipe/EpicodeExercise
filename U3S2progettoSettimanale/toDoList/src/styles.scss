@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.completed {
+    background-color: green;
+  }
+  
+.notcompleted {
+    background-color: red;
+}
+
+li {
+    list-style-type: none;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+}
+
+input:nth-child(1) {
+    margin: 10px;
+}
