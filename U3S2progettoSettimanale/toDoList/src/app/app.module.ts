@@ -7,6 +7,7 @@ import { CompletedTodosComponent } from './components/completed-todos/completed-
 import { AppRoutingModule } from './app-routing.module';
 import { UncompletedTodosComponent } from './components/uncompleted-todos/uncompleted-todos.component';
 import { UserComponent } from './components/user/user.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { UserComponent } from './components/user/user.component';
     UserComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule
+    BrowserModule, AppRoutingModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
