@@ -1,7 +1,0 @@
-<form (ngSubmit)="onSubmit()" #myForm="ngForm">
-  <input type="text" id="fname" name="fname" placeholder="first name" ngModel><br>
-  <input type="text" id="lname" name="lname" placeholder="last name" ngModel><br>
-  <input type="email" id="email" name="email" placeholder="email" required email ngModel #myEmail="ngModel"><br>
-  <div><small *ngIf="myEmail.invalid && myEmail.touched">The email is required</small></div>
-  <input type="submit" placeholder="submit" [disabled]="!myForm.valid">
-</form>
