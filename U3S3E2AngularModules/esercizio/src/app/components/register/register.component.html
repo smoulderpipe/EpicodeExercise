@@ -1,0 +1,60 @@
+<div class="container my-5">
+    <form class="d-flex flex-column" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+      <label for="firstname">Nome*</label>
+      <input type="text" name="firstname" formControlName="firstname">
+      <div class="avviso"><small
+          *ngIf="reactiveForm.get('firstname')?.invalid && reactiveForm.get('firstname')?.touched">Il campo Nome è
+          obbligatorio</small></div>
+      <label for="lastname">Cognome*</label>
+      <input type="text" name="lastname" formControlName="lastname">
+      <div class="avviso"><small *ngIf="reactiveForm.get('lastname')?.invalid && reactiveForm.get('lastname')?.touched">Il campo Cognome è obbligatorio</small></div>
+      <label for="password">Password*</label>
+      <input type="password" name="password" formControlName="password">
+      <div class="avviso">
+        <small *ngIf="reactiveForm.get('password')?.hasError('required') && reactiveForm.get('password')?.touched">
+          Il campo Password è obbligatorio
+        </small>
+        <small *ngIf="reactiveForm.get('password')?.hasError('minlength')">
+          La password deve essere lunga almeno 8 caratteri
+        </small>
+      </div>
+      <label for="passwordConf">Conferma password*</label>
+      <input type="password" name="passwordConf" formControlName="passwordConf">
+      <div class="avviso">
+        <small
+          *ngIf="reactiveForm.get('passwordConf')?.hasError('required') && reactiveForm.get('passwordConf')?.touched">
+          Il campo Conferma Password è obbligatorio
+        </small>
+        <small *ngIf="reactiveForm.get('passwordConf')?.hasError('minlength')">
+          La password deve essere lunga almeno 8 caratteri
+        </small>
+        <small
+          *ngIf="reactiveForm.get('passwordConf')?.hasError('passwordMatch') && reactiveForm.get('passwordConf')?.touched">
+          Le password non coincidono
+        </small>
+      </div>
+  
+      <label for="gender">Genere</label>
+      <select name="gender" formControlName="gender">
+        <option value="uomo">Uomo</option>
+        <option value="donna">Donna</option>
+        <option value="nonBinario">Non binario</option>
+      </select>
+      <label for="profilePic">Immagine del profilo</label>
+      <input type="file" name="profilePic" formControlName="profilePic">
+      <label for="bio">Biografia</label>
+      <input type="textarea" name="bio" formControlName="bio" id="bio">
+      <label for="username">Username*</label>
+      <input type="text" name="username" formControlName="username">
+      <div class="avviso">
+        <small *ngIf="reactiveForm.get('username')?.hasError('required') && reactiveForm.get('username')?.touched">
+          Il campo Username è obbligatorio
+        </small>
+        <small *ngIf="reactiveForm.get('username')?.hasError('minlength')">
+          L'Username deve essere lungo almeno 6 caratteri
+        </small>
+      </div>
+      <input type="submit" value="Registrati" class="mt-4 btn-success text-uppercase py-2"
+        [disabled]="!reactiveForm.valid">
+    </form>
+  </div>

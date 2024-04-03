@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+input, select, label {
+    font-size: 20px;
+}
+
+
+label {
+    margin-top:20px;
+}
+
+.avviso {
+    color: red;
+}
+
+.btn-success:disabled {
+    background: #ccc;
+    color: #666;
+    border-color: #ccc;
+}

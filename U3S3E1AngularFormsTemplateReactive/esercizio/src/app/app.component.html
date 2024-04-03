@@ -20,12 +20,11 @@ Crea una finta pagina di login con i campi username e password, usando di templa
     <label for="firstname">Nome*</label>
     <input type="text" name="firstname" formControlName="firstname">
     <div class="avviso"><small
-        *ngIf="reactiveForm.get('firstname')?.invalid && reactiveForm.get('firstname')?.touched">Il campo è
+        *ngIf="reactiveForm.get('firstname')?.invalid && reactiveForm.get('firstname')?.touched">Il campo Nome è
         obbligatorio</small></div>
     <label for="lastname">Cognome*</label>
     <input type="text" name="lastname" formControlName="lastname">
-    <div class="avviso"><small *ngIf="reactiveForm.get('lastname')?.invalid && reactiveForm.get('lastname')?.touched">Il
-        campo è obbligatorio</small></div>
+    <div class="avviso"><small *ngIf="reactiveForm.get('lastname')?.invalid && reactiveForm.get('lastname')?.touched">Il campo Cognome è obbligatorio</small></div>
     <label for="password">Password*</label>
     <input type="password" name="password" formControlName="password">
     <div class="avviso">

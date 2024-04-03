@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Personale1</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+
+<!-- 
+
+-------------------------MODULES------------------------------------
+
+COSA SONO
+Un modulo è un modo di creare un bundle (cioè impacchettamento) dei building blocks di Angular (components, directives, services, pipes). Tutti i progetti Angular ne hanno almeno uno (app module), a meno che non ci siano componenti standalone.
+
+COME RENDERE UNA CLASSE MODULARE
+Bisogna decorarla con l'NgModule decorator.
+
+ANATOMIA DEL MODULO
+- Declarations:
+  Definisce i componenti, le direttive e i pipe che sono locali al modulo.
+- Imports:
+  Permette di utilizzare componenti, direttive, pipe e moduli esterni all'interno del modulo.
+- Provider:
+  Definisce i servizi che sono istanziati e forniti dal modulo.
+- Bootstrap:
+  Definisce il componente principale che viene avviato all'avvio del modulo.
+
+NB
+- I moduli sono indipendenti e non dialogano tra di loro, a meno che non li si faccia comunicare manualmente
+- I moduli di routing non hanno declarations
+- I moduli che devono esportare qualcosa hanno anche un "Exports: []"
+- Lo stesso componente non può essere dichiarato 2 volte in 2 moduli diversi nella stessa app (ma deve essere importato in tutti i componenti che ne hanno bisogno)
+
+TIPI DI MODULI
+- MODULO RADICE / CORE MODULE
+  È il modulo di base dell'app, contiene i service che andremo ad usare in tutta l'app (es. BrowserModule, HttpClientModule), si può splittare in feature modules.
+- MODULI FEATURE
+  Sono moduli che si possono creare e mettere a disposizione di singoli componenti, permettendo loro di caricarli senza doverli caricare in tutta l'app.
+- MODULI SHARED
+  Contengono le direttive, pipe e componenti che vengono usati tra più moduli feature.
+
+COME CREARE UN MODULO TRAMITE CLI
+ng g module nomeModulo (aggiungi "--routing--flat" se non vuoi generare una cartella)
+
+LOADING DEI MODULI
+- EAGER LOADING
+  Di default carica tutti i moduli nel bundle iniziale anche se non servono subito.
+- LAZY LOADING
+  Permette di caricare i moduli solo quando ci servono per ridurre il bundle iniziale. Viene gestito all'interno di un app routing module tramite un "const routes: Routes..."
+
+COME USARE I MODULI (ESEMPIO FEATURE MODULE)
+Abbiamo una serie di componenti (dashboard, create task, task details) che vogliamo rendere disponibili solo nel dashboard module, non in tutta l'app. Quindi:
+  - Cancelliamo da app.module.ts i componenti sopra citati
+  - Creiamo dashboard.module.ts all'interno del quale importiamo i componenti tolti dall'app.module.ts.
+  - Per permettere all'app di trovare i componenti tolti dall'app.module.ts, li inseriamo dentro le declarations e dentro gli exports del dashboard.module.ts, e inseriamo DashBoardModule tra gli import di app.module.ts
+  - Per permettere il funzionamento della dashboard sul browser (per com'è stata impostata l'app dall'autore) dobbiamo importare CommonModule e FormsModule dentro dashboard.module.ts (non carichiamo Browser Module perché deve essere eseguito solo dentro l'app.module.ts) e dichiarare il LoaderComponent, ma se lo facciamo si crea un errore perché il LoaderComponent è dichiarato anche in app.module.ts... quindi dobbiamo usare gli shared modules.
+
+COME USARE I MODULI (ESEMPIO SHARED MODULE)
+  - Proseguendo con il lavoro impostato nell'esempio precedente, creiamo dentro l'app uno shared.module.ts
+  - Inseriamo il LoaderComponent tra le dichiarazioni e gli exports dello shared module, e lo togliamo dalle altre posizioni (app module e dashboard module)
+  - Inseriamo il FormsModule tra gli import dello shared module, e lo togliamo dalle altre posizioni (app module e dashboard module)
+
+-------------------------GUARDS------------------------------------
+
+A COSA SERVONO
+A bloccare la navigazione alle pagine in base a certe condizioni.
+Es, se l'utente è già loggato accede alla risorsa, non alla pagina di login (e viceversa).
+
+COSA SONO
+Una Guard è un service che implementa il metodo CanActivate e restituisce un valore booleano. Quando andiamoa definire le rotte, inseriamo la guard in una proprietà canActivate.
+
+
+
+
+
+ -->
