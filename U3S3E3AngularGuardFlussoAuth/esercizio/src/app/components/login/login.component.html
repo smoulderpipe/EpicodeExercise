@@ -1,0 +1,10 @@
+<div class="container my-5">
+    <form class="d-flex flex-column" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label for="username">Username</label>
+      <input type="text" name="username" formControlName="username">
+      <label for="password">Password</label>
+      <input type="password" name="password" formControlName="password">
+      <input type="submit" value="Login" class="mt-4 btn-success text-uppercase py-2">
+    </form>
+  </div>
+  

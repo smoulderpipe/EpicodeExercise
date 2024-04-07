@@ -1,0 +1,54 @@
+<div class="container my-5">
+    <form class="d-flex flex-column" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <label for="username">Username*</label>
+        <input type="text" name="username" formControlName="username">
+        <div class="avviso">
+          <small *ngIf="reactiveForm.get('username')?.hasError('required') && reactiveForm.get('username')?.touched">
+            Il campo Username è obbligatorio
+          </small>
+          <small *ngIf="reactiveForm.get('username')?.hasError('minlength')">
+            L'Username deve essere lungo almeno 5 caratteri
+          </small>
+        </div>
+
+        <label for="username">Email*</label>
+        <input type="email" name="email" formControlName="email">
+        <div class="avviso">
+          <small *ngIf="reactiveForm.get('email')?.hasError('required') && reactiveForm.get('email')?.touched">
+            Il campo Email è obbligatorio
+          </small>
+          <small *ngIf="reactiveForm.get('email')?.hasError('email') && reactiveForm.get('email')?.touched">
+            Inserire una mail valida
+          </small>
+        </div>
+      <label for="password">Password*</label>
+      <input type="password" name="password" formControlName="password">
+      <div class="avviso">
+        <small *ngIf="reactiveForm.get('password')?.hasError('required') && reactiveForm.get('password')?.touched">
+          Il campo Password è obbligatorio
+        </small>
+        <small *ngIf="reactiveForm.get('password')?.hasError('minlength')">
+          La password deve essere lunga almeno 8 caratteri
+        </small>
+      </div>
+      <label for="passwordConf">Conferma password*</label>
+      <input type="password" name="passwordConf" formControlName="passwordConf">
+      <div class="avviso">
+        <small
+          *ngIf="reactiveForm.get('passwordConf')?.hasError('required') && reactiveForm.get('passwordConf')?.touched">
+          Il campo Conferma Password è obbligatorio
+        </small>
+        <small *ngIf="reactiveForm.get('passwordConf')?.hasError('minlength')">
+          La password deve essere lunga almeno 8 caratteri
+        </small>
+        <small
+          *ngIf="reactiveForm.get('passwordConf')?.hasError('passwordMatch') && reactiveForm.get('passwordConf')?.touched">
+          Le password non coincidono
+        </small>
+      </div>
+  
+      
+      <input type="submit" value="Registrati" class="mt-4 btn-success text-uppercase py-2"
+        [disabled]="!reactiveForm.valid">
+    </form>
+  </div>

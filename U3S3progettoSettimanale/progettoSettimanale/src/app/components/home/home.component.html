@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Popular Movies</h2>
+    <div *ngIf="movies_popular.length > 0" class="row">
+        <div *ngFor="let movie_popular of movies_popular" class="col-3">
+            <div class="card">
+                <img src="{{ imageUrl }}{{ movie_popular.poster_path }}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie_popular.title }}</h5>
+                    <!-- <p class="card-text">{{ movie.overview | slice:0:30 }}...</p> -->
+                    <a href="#" class="btn btn-primary">Add to favourites</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Toprated Movies</h2>
+    <div *ngIf="movies_toprated.length > 0" class="row">
+        <div *ngFor="let movie_toprated of movies_toprated" class="col-3">
+            <div class="card">
+                <img src="{{ imageUrl }}{{ movie_toprated.poster_path }}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie_toprated.title }}</h5>
+                    <!-- <p class="card-text">{{ movie.overview | slice:0:30 }}...</p> -->
+                    <a href="#" class="btn btn-primary">Add to favourites</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
