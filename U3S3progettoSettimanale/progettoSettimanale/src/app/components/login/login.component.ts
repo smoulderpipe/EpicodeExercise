@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           console.log('Login effettuato con successo!');
           this.loginSuccess.emit();
           // Redirect o azioni da eseguire dopo il login
-          // window.location.href = "/profile";
+          window.location.href = "/profile";
         },
         error => {
           console.error('Login fallito:', error);

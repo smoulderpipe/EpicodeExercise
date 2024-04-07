@@ -1,7 +1,34 @@
-<div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Profile Details</h5>
-      <!-- <p>Username: {{ username }}</p> -->
+<div class="container pt-4">
+  <div *ngIf="userEmail">
+    <h2>Profilo</h2>
+    <p>Username: {{ username}}</p>
+    <p>Email: {{ userEmail }}</p>
+  </div>
+
+  <div *ngIf="!userEmail">
+    <p>Utente non ancora effettuato l'accesso.</p>
+  </div>
+
+</div>
+
+
+<div class="container pt-4">
+  <h5 class="fw-bold">I miei film preferiti</h5>
+  <div *ngIf="favoriteMovies && favoriteMovies.length > 0">
+    <div class="row">
+      <div *ngFor="let movie of favoriteMovies" class="col-3">
+        <div class="card">
+          <!-- <img [src]="imageUrl + movie.poster_path" class="card-img-top" alt="{{ movie.title }}"> -->
+          <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p class="card-text">{{ movie.overview }}</p>
+            <!-- Aggiungi qui altri dettagli del film se necessario -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
+  <div *ngIf="favoriteMovies && favoriteMovies.length === 0">
+    <p>Nessun film preferito trovato.</p>
+  </div>
+</div>

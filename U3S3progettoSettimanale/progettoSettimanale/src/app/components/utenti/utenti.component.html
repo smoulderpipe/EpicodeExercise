@@ -1,5 +1,7 @@
-<ul *ngIf="users.length > 0">
-    <li *ngFor="let user of users" class="list-unstyled">
-        {{ user.username }}
-    </li>
-</ul>
+<div class="container pt-4">
+    <ul class="ps-0" *ngIf="users.length > 0">
+        <li *ngFor="let user of users" class="list-unstyled">
+            {{ user.username }}
+        </li>
+    </ul>
+</div>

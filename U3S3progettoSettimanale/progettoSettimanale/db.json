@@ -26,9 +26,10 @@
       "password": "124455"
     },
     {
-      "id": "fbdd",
+      "id": "d1ec",
+      "password": "aloap123",
       "username": "aloap",
-      "password": "aloap123"
+      "email": "aloap@gmail.com"
     }
   ],
   "favorites": [
@@ -941,7 +942,5 @@
       "vote_count": 267
     }
   ],
-  "login": [
-    
-  ]
+  "login": []
 }
